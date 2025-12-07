@@ -1,0 +1,1050 @@
+APAL Community Detection Results
+==================================================
+
+Number of communities: 243
+Threshold used: 0.5
+
+Community 1 (size: 7):
+Nodes: ATM, BRCA1, BRCA2, CDKN2A, CHEK2, PPM1D, PTEN
+Intraconnectivity: 0.8095
+
+Community 2 (size: 8):
+Nodes: BRCA1, BRCA2, CDKN2A, CHEK2, POLD1, PPM1D, PTEN, TP53
+Intraconnectivity: 0.7143
+
+Community 3 (size: 13):
+Nodes: AKT1, ARID1A, ATM, BRCA1, CDKN2A, ESR1, FBXW7, HSP90AA1, KMT2C, KRAS, NOTCH1, SMAD4, TP53
+Intraconnectivity: 0.6026
+
+Community 4 (size: 24):
+Nodes: AFDN, AKT1, ALK, ARHGEF12, BRAF, CDKN2A, EGFR, ERBB2, ERBB3, ERBB4, ESR1, FGFR2, GNAS, HSP90AA1, JAK2, KRAS, MAP3K1, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.5072
+
+Community 5 (size: 14):
+Nodes: AKT1, ATM, CDKN2A, EGFR, EP300, ERBB2, FBXW7, FGFR2, HRAS, KRAS, PIK3CA, PTEN, SMAD4, TP53
+Intraconnectivity: 0.7473
+
+Community 6 (size: 10):
+Nodes: AKT1, CDH1, EGFR, HSP90AA1, JAK1, JAK2, KRAS, PIK3CA, PIK3R1, TP53
+Intraconnectivity: 0.8444
+
+Community 7 (size: 16):
+Nodes: AKT1, ALK, EGFR, ERBB2, ERBB3, FGFR2, HRAS, HSP90AA1, JAK1, KDR, KRAS, MTOR, PIK3CA, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.7667
+
+Community 8 (size: 23):
+Nodes: AKT1, BRCA1, CDH1, CDKN2A, ERBB2, ERBB3, ERBB4, ESR1, GNAS, HRAS, HSP90AA1, JAK1, JAK2, KDR, KRAS, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.6126
+
+Community 9 (size: 28):
+Nodes: AKT1, ALK, ARID1A, BRAF, BRCA1, BRCA2, CDKN2A, CSF1R, EGFR, ERBB2, ERBB3, ERBB4, ESR1, FBXW7, FGFR2, HRAS, HSP90AA1, JAK1, JAK2, KDR, KRAS, MTOR, NF1, NOTCH1, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.5106
+
+Community 10 (size: 19):
+Nodes: AKT1, BRAF, BRCA1, BRCA2, CDH1, EGFR, EP300, ERBB2, ERBB4, FGFR2, HRAS, HSP90AA1, KRAS, MTOR, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.6550
+
+Community 11 (size: 25):
+Nodes: ALK, ATM, BRCA1, BRCA2, CDH1, CDKN2A, EGFR, ERBB3, ERBB4, ESR1, FBXW7, FGFR2, HRAS, HSP90AA1, JAK1, JAK2, KRAS, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.5600
+
+Community 12 (size: 9):
+Nodes: BRAF, BRCA1, CDKN2A, EP300, KMT2C, KRAS, PIK3CA, PTEN, TP53
+Intraconnectivity: 0.7500
+
+Community 13 (size: 27):
+Nodes: AKT1, ALK, ARID1A, ATM, BRAF, BRCA1, BRCA2, CDH1, CDKN2A, EGFR, ERBB2, ERBB3, ERBB4, ESR1, FBXW7, HRAS, HSP90AA1, JAK2, KRAS, MAP3K1, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, SMAD4, TP53
+Intraconnectivity: 0.5470
+
+Community 14 (size: 22):
+Nodes: ATM, BRAF, BRCA1, CDH1, CDKN2A, EGFR, EP300, ERBB3, ESR1, HRAS, HSP90AA1, JAK2, KDR, KRAS, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.6277
+
+Community 15 (size: 20):
+Nodes: AKT1, ALK, ATM, BRAF, BRCA1, EGFR, EP300, ERBB2, ERBB3, ERBB4, ESR1, HRAS, JAK2, KDR, KRAS, MTOR, PIK3CA, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.6632
+
+Community 16 (size: 16):
+Nodes: AKT1, ARID1A, ATM, BRCA2, CDKN2A, ESR1, FBXW7, GNAS, HRAS, HSP90AA1, KRAS, NF1, PIK3CA, PTEN, SMAD4, TP53
+Intraconnectivity: 0.6500
+
+Community 17 (size: 11):
+Nodes: ALK, EGFR, ERBB2, ERBB3, FGFR2, JAK2, KDR, KRAS, PIK3CA, PIK3R1, TP53
+Intraconnectivity: 0.8000
+
+Community 18 (size: 15):
+Nodes: AKT1, BRAF, BRCA1, BRCA2, CDKN2A, EP300, ERBB2, FBXW7, FGFR2, HSP90AA1, KRAS, NF1, NOTCH1, PTEN, TP53
+Intraconnectivity: 0.6762
+
+Community 19 (size: 12):
+Nodes: AFDN, AKT1, CDKN2A, EGFR, ERBB2, ERBB3, ESR1, KDR, KRAS, PTEN, SMAD4, TP53
+Intraconnectivity: 0.6667
+
+Community 20 (size: 24):
+Nodes: AFDN, AKT1, ALK, ARHGEF12, BRAF, CDKN2A, EGFR, ERBB2, ERBB3, ERBB4, ESR1, FGFR2, GNAS, HRAS, HSP90AA1, JAK2, MAP3K1, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.5072
+
+Community 21 (size: 20):
+Nodes: AKT1, ALK, BRAF, CDKN2A, EGFR, ERBB2, ERBB4, ESR1, GNAS, HRAS, HSP90AA1, JAK2, KRAS, MAP3K1, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4
+Intraconnectivity: 0.6368
+
+Community 22 (size: 3):
+Nodes: H3C2, KAT6B, RUNX1
+Intraconnectivity: 0.6667
+
+Community 23 (size: 11):
+Nodes: AKT1, ATM, CDKN2A, CREBBP, FBXW7, KRAS, NCOR2, NOTCH1, NOTCH2, SMAD4, TP53
+Intraconnectivity: 0.6364
+
+Community 24 (size: 13):
+Nodes: AKT1, CDKN2A, CREBBP, EGFR, EP300, ERBB2, HRAS, KRAS, NCOR2, NOTCH1, PIK3CA, PTEN, TP53
+Intraconnectivity: 0.7308
+
+Community 25 (size: 14):
+Nodes: AKT1, ATM, CDKN2A, EGFR, EP300, ERBB2, FBXW7, FGFR2, HRAS, NOTCH1, PIK3CA, PTEN, SMAD4, TP53
+Intraconnectivity: 0.7473
+
+Community 26 (size: 9):
+Nodes: AKT1, CDKN2A, EP300, FBXW7, NCOR2, NOTCH1, NOTCH2, SMAD4, TP53
+Intraconnectivity: 0.6389
+
+Community 27 (size: 14):
+Nodes: AKT1, ATM, CDKN2A, CREBBP, EGFR, EP300, ERBB2, FBXW7, HRAS, KRAS, NOTCH1, PIK3CA, PTEN, SMAD4
+Intraconnectivity: 0.7582
+
+Community 28 (size: 11):
+Nodes: AKT1, CDKN2A, ERBB2, HRAS, KRAS, NOTCH1, NOTCH2, PIK3CA, PTEN, SMAD4, TP53
+Intraconnectivity: 0.8182
+
+Community 29 (size: 5):
+Nodes: CREBBP, EP300, NOTCH1, SMAD4, SPEN
+Intraconnectivity: 0.7000
+
+Community 30 (size: 16):
+Nodes: AKT1, ALK, ASXL1, CDKN1B, EGFR, ERBB2, HRAS, HSP90AA1, JAK1, JAK2, KDR, KRAS, MTOR, PIK3CA, PIK3R1, PTEN
+Intraconnectivity: 0.6833
+
+Community 31 (size: 15):
+Nodes: AKT1, CDKN1B, ERBB2, ERBB3, HRAS, HSP90AA1, JAK1, JAK2, KDR, KRAS, MTOR, PIK3CA, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.7810
+
+Community 32 (size: 15):
+Nodes: ALK, CDKN1B, EGFR, ERBB3, FGFR2, HRAS, HSP90AA1, JAK1, JAK2, KRAS, MTOR, PIK3CA, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.7429
+
+Community 33 (size: 14):
+Nodes: AKT1, ALK, CDKN1B, EGFR, ERBB2, ERBB3, HRAS, HSP90AA1, JAK2, KRAS, MTOR, PIK3CA, PIK3R1, TP53
+Intraconnectivity: 0.8242
+
+Community 34 (size: 12):
+Nodes: AKT1, ARID1A, ATM, BRCA1, CDKN2A, CREBBP, CTCF, KRAS, NOTCH1, RB1, SMAD4, TP53
+Intraconnectivity: 0.6364
+
+Community 35 (size: 18):
+Nodes: AKT1, ARID1A, ATM, BRAF, BRCA1, BRCA2, CDH1, CDKN2A, EGFR, EP300, ERBB2, HRAS, NF1, NOTCH1, PIK3CA, PTEN, SMAD4, TP53
+Intraconnectivity: 0.7059
+
+Community 36 (size: 23):
+Nodes: AKT1, ARID1A, ATM, BRAF, BRCA1, BRCA2, CDH1, CDKN1B, CDKN2A, CHEK2, CREBBP, CTCF, EGFR, EP300, ERBB2, HRAS, KRAS, NF1, NOTCH1, PIK3CA, PTEN, RB1, SMAD4
+Intraconnectivity: 0.5336
+
+Community 37 (size: 10):
+Nodes: BRAF, BRCA1, CDKN2A, CREBBP, EP300, KRAS, PIK3CA, PTEN, RB1, TP53
+Intraconnectivity: 0.7333
+
+Community 38 (size: 20):
+Nodes: AKT1, ARID1A, ATM, BRAF, BRCA1, BRCA2, CDH1, CDKN1B, CDKN2A, CHEK2, EGFR, ERBB2, HRAS, KRAS, NF1, NOTCH1, PIK3CA, RB1, SMAD4, TP53
+Intraconnectivity: 0.6105
+
+Community 39 (size: 14):
+Nodes: AKT1, BRAF, BRCA1, BRCA2, CDKN1B, CDKN2A, CHEK2, EP300, ERBB2, KRAS, NF1, NOTCH1, PTEN, TP53
+Intraconnectivity: 0.6923
+
+Community 40 (size: 10):
+Nodes: ASXL1, CREBBP, DNMT3A, EP300, ESR1, GATA3, KMT2C, KMT2D, NCOR1, RUNX1
+Intraconnectivity: 0.6000
+
+Community 41 (size: 11):
+Nodes: CBFB, CREBBP, ESR1, GATA3, KAT6B, KMT2C, KMT2D, NCOR1, NCOR2, RUNX1, TP53
+Intraconnectivity: 0.5636
+
+Community 42 (size: 4):
+Nodes: EP300, GATA3, MYH11, RUNX1
+Intraconnectivity: 0.6667
+
+Community 43 (size: 9):
+Nodes: EP300, ESR1, GATA3, KMT2C, KMT2D, NCOR1, NCOR2, RUNX1, TP53
+Intraconnectivity: 0.7778
+
+Community 44 (size: 16):
+Nodes: AKT1, BRCA1, CREBBP, EGFR, EP300, ERBB2, ESR1, FOXA1, HSP90AA1, KDM6A, KMT2D, NCOR1, PTEN, RB1, SMAD4, TP53
+Intraconnectivity: 0.5667
+
+Community 45 (size: 20):
+Nodes: AKT1, AR, BRAF, CDH1, CDKN2A, CREBBP, EGFR, EP300, ERBB2, ESR1, HRAS, KLF4, KRAS, MEN1, NCOR1, NF1, NOTCH1, PIK3CA, PTEN, TP53
+Intraconnectivity: 0.5842
+
+Community 46 (size: 11):
+Nodes: ARID1A, CREBBP, EP300, FOXA1, KDM6A, KMT2D, KRAS, MEN1, NCOR1, RUNX1, TP53
+Intraconnectivity: 0.5636
+
+Community 47 (size: 7):
+Nodes: CDKN2A, EP300, ESR1, FOXA1, KDM6A, NCOR1, TP53
+Intraconnectivity: 0.6667
+
+Community 48 (size: 14):
+Nodes: AKT1, ATM, CDKN2A, CREBBP, EGFR, EP300, ERBB2, FBXW7, HRAS, KRAS, PIK3CA, PTEN, SMAD4, TP53
+Intraconnectivity: 0.7582
+
+Community 49 (size: 7):
+Nodes: AKT1, CDH1, CREBBP, EP300, KDM6A, SMAD4, TP53
+Intraconnectivity: 0.8095
+
+Community 50 (size: 6):
+Nodes: AKT1, ATM, CYLD, EGFR, PTEN, TP53
+Intraconnectivity: 0.6667
+
+Community 51 (size: 6):
+Nodes: CDKN1B, ESR1, KMT2C, KMT2D, SMAD4, TP53
+Intraconnectivity: 0.5333
+
+Community 52 (size: 16):
+Nodes: AKT1, ALK, ASXL1, CDKN1B, EGFR, ERBB2, HRAS, HSP90AA1, JAK1, KDR, KRAS, MTOR, PIK3CA, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.6833
+
+Community 53 (size: 23):
+Nodes: AKT1, ARID1A, ATM, BRAF, BRCA1, BRCA2, CDH1, CDKN1B, CHEK2, CREBBP, CTCF, EGFR, EP300, ERBB2, HRAS, KRAS, NF1, NOTCH1, PIK3CA, PTEN, RB1, SMAD4, TP53
+Intraconnectivity: 0.5336
+
+Community 54 (size: 10):
+Nodes: ASXL1, CREBBP, DNMT3A, EP300, ESR1, GATA3, KMT2C, KMT2D, NCOR1, TP53
+Intraconnectivity: 0.6000
+
+Community 55 (size: 22):
+Nodes: AKT1, AR, ARID1A, ATM, BRCA2, CDKN2A, CHEK2, CREBBP, EGFR, EP300, ERBB2, ESR1, GATA3, HSP90AA1, KRAS, MAP3K1, NF1, PIK3CA, PIK3R1, PTEN, RB1, TP53
+Intraconnectivity: 0.5281
+
+Community 56 (size: 11):
+Nodes: ATM, BRAF, CREBBP, EP300, ERBB2, KRAS, MTOR, NOTCH1, PIK3CA, PTEN, TP53
+Intraconnectivity: 0.6727
+
+Community 57 (size: 25):
+Nodes: AKT1, AR, BRCA1, CASP8, CDH1, CDKN1B, CDKN2A, ERBB2, ERBB4, ESR1, GNAS, HRAS, HSP90AA1, JAK1, JAK2, KDR, KRAS, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.5333
+
+Community 58 (size: 26):
+Nodes: AKT1, ALK, ARID1A, BRAF, BRCA1, BRCA2, CDKN2A, EGFR, ERBB2, ERBB4, ESR1, FBXW7, FOXA1, HRAS, HSP90AA1, JAK1, JAK2, KDR, KRAS, MTOR, NF1, NOTCH1, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.5385
+
+Community 59 (size: 11):
+Nodes: AR, ARID1A, CREBBP, EP300, ESR1, KDM6A, KMT2C, MEN1, NCOR1, RUNX1, TP53
+Intraconnectivity: 0.6909
+
+Community 60 (size: 25):
+Nodes: ALK, AR, ATM, BRCA1, BRCA2, CDH1, CDKN1B, CDKN2A, EGFR, ERBB4, ESR1, FBXW7, HRAS, HSP90AA1, JAK1, JAK2, KRAS, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.5367
+
+Community 61 (size: 14):
+Nodes: AR, CREBBP, CTCF, EP300, ERBB4, ESR1, HSP90AA1, KDM6A, KMT2C, KMT2D, RUNX1, SMAD4, SMARCD1, TP53
+Intraconnectivity: 0.5275
+
+Community 62 (size: 5):
+Nodes: ARID1A, ASXL1, H3C2, RUNX1, TP53
+Intraconnectivity: 0.5000
+
+Community 63 (size: 5):
+Nodes: ARID1A, H3C2, NCOR1, RB1, TP53
+Intraconnectivity: 0.5000
+
+Community 64 (size: 26):
+Nodes: AR, ATM, BRAF, BRCA1, CASP8, CDH1, CDKN1B, CDKN2A, CREBBP, EGFR, EP300, ESR1, HRAS, HSP90AA1, JAK2, KDR, KLF4, KRAS, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.5169
+
+Community 65 (size: 9):
+Nodes: AR, ARID1A, BRCA1, CDKN1B, CDKN2A, EP300, PTEN, SMARCD1, TP53
+Intraconnectivity: 0.6389
+
+Community 66 (size: 9):
+Nodes: AR, CTCF, EP300, ESR1, GATA3, KMT2C, NF1, PIK3CA, TP53
+Intraconnectivity: 0.5000
+
+Community 67 (size: 21):
+Nodes: AKT1, ALK, AR, ATM, BRAF, BRCA1, EGFR, EP300, ERBB2, ERBB4, ESR1, HRAS, JAK2, KDR, KRAS, MTOR, NCOR1, PIK3CA, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.6143
+
+Community 68 (size: 10):
+Nodes: AKT1, ATM, CDKN2A, EGFR, ERBB2, JAK2, MEN1, PTEN, RB1, TP53
+Intraconnectivity: 0.6222
+
+Community 69 (size: 12):
+Nodes: AKT1, CDKN2A, CREBBP, EGFR, ERBB2, ESR1, KDR, KLF4, KRAS, PTEN, SMAD4, TP53
+Intraconnectivity: 0.7121
+
+Community 70 (size: 12):
+Nodes: ATM, BRAF, BRCA1, CDKN2A, CHEK2, ERBB2, ESR1, KRAS, NF1, PIK3CA, PTEN, TP53
+Intraconnectivity: 0.8182
+
+Community 71 (size: 15):
+Nodes: AKT1, ATM, BRAF, BRCA1, BRCA2, CDKN2A, EGFR, ERBB2, FOXA1, HRAS, KRAS, PIK3CA, PTEN, SMAD4, TP53
+Intraconnectivity: 0.7524
+
+Community 72 (size: 5):
+Nodes: DNMT3A, JAK2, KDM6A, RUNX1, TP53
+Intraconnectivity: 0.5000
+
+Community 73 (size: 16):
+Nodes: AKT1, AR, BRCA1, CREBBP, CTCF, ESR1, FOXA1, GATA3, HSP90AA1, KMT2D, KRAS, NCOR1, NCOR2, RUNX1, SMAD4, TP53
+Intraconnectivity: 0.5500
+
+Community 74 (size: 15):
+Nodes: AKT1, BRCA1, CREBBP, EGFR, EP300, ERBB2, ESR1, FOXA1, HSP90AA1, KMT2D, NCOR1, NCOR2, PTEN, SMAD4, TP53
+Intraconnectivity: 0.6095
+
+Community 75 (size: 17):
+Nodes: AKT1, AR, BRAF, CDH1, CREBBP, EGFR, EP300, ERBB2, ESR1, HRAS, KRAS, MEN1, NCOR1, NCOR2, PIK3CA, PTEN, TP53
+Intraconnectivity: 0.5735
+
+Community 76 (size: 19):
+Nodes: AKT1, BRAF, BRCA1, BRCA2, CDH1, EGFR, EP300, ERBB2, ERBB4, ESR1, FGFR2, HRAS, HSP90AA1, MTOR, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.6550
+
+Community 77 (size: 13):
+Nodes: AKT1, AR, BRCA1, CDH1, EP300, ESR1, GATA3, KMT2D, NCOR1, NCOR2, RUNX1, SMAD4, TP53
+Intraconnectivity: 0.6410
+
+Community 78 (size: 19):
+Nodes: AKT1, BRAF, BRCA1, BRCA2, EGFR, ERBB2, ERBB4, ESR1, FGFR2, FOXA1, HRAS, HSP90AA1, KRAS, MTOR, NTRK1, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.6082
+
+Community 79 (size: 12):
+Nodes: AR, CREBBP, CTCF, EP300, ERBB4, ESR1, HSP90AA1, KMT2D, NCOR2, RUNX1, SMAD4, TP53
+Intraconnectivity: 0.6212
+
+Community 80 (size: 18):
+Nodes: AR, BRCA1, BRCA2, CDH1, EGFR, ERBB4, ESR1, FGFR2, HRAS, HSP90AA1, KRAS, MTOR, NTRK1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.6209
+
+Community 81 (size: 18):
+Nodes: AKT1, AR, BRAF, BRCA1, BRCA2, CDH1, EGFR, ERBB2, ERBB4, ESR1, HRAS, HSP90AA1, KRAS, MTOR, PIK3CA, PIK3R1, SMAD4, TP53
+Intraconnectivity: 0.7124
+
+Community 82 (size: 4):
+Nodes: ARID1A, ARID1B, RB1, TP53
+Intraconnectivity: 0.8333
+
+Community 83 (size: 9):
+Nodes: ARID1A, BRCA1, CDKN2A, CREBBP, KMT2C, KMT2D, KRAS, RB1, TP53
+Intraconnectivity: 0.7222
+
+Community 84 (size: 4):
+Nodes: ARID1A, KMT2C, RB1, SMARCD1
+Intraconnectivity: 0.6667
+
+Community 85 (size: 8):
+Nodes: ARID1A, ARID1B, BRCA1, CDKN2A, EP300, PTEN, SMARCD1, TP53
+Intraconnectivity: 0.6429
+
+Community 86 (size: 7):
+Nodes: ARID1A, ARID1B, CREBBP, EP300, KMT2D, KRAS, TP53
+Intraconnectivity: 0.6667
+
+Community 87 (size: 9):
+Nodes: ARID1A, BRAF, BRCA1, CDKN2A, EP300, KMT2C, PIK3CA, PTEN, TP53
+Intraconnectivity: 0.7500
+
+Community 88 (size: 7):
+Nodes: ARID1A, BRCA1, CDKN2A, EP300, KMT2C, KMT2D, TP53
+Intraconnectivity: 0.8095
+
+Community 89 (size: 13):
+Nodes: AKT1, AR, ATM, BRCA1, CDKN2A, CREBBP, ESR1, HSP90AA1, KLF4, KRAS, NOTCH1, SMAD4, TP53
+Intraconnectivity: 0.6923
+
+Community 90 (size: 22):
+Nodes: AKT1, ATM, BRAF, BRCA1, CDH1, CDKN2A, EGFR, EP300, ERBB3, ESR1, HRAS, HSP90AA1, JAK2, KDR, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.6277
+
+Community 91 (size: 11):
+Nodes: AKT1, AR, BRCA1, CDH1, CDKN2A, EP300, ESR1, KLF4, NOTCH1, SMAD4, TP53
+Intraconnectivity: 0.7273
+
+Community 92 (size: 26):
+Nodes: AKT1, AR, ATM, BRAF, BRCA1, CASP8, CDH1, CDKN1B, CDKN2A, CREBBP, EGFR, EP300, ESR1, HRAS, HSP90AA1, JAK2, KDR, KLF4, KRAS, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4
+Intraconnectivity: 0.5169
+
+Community 93 (size: 22):
+Nodes: AKT1, AR, BRCA1, CASP8, CDH1, CDKN1B, CDKN2A, ERBB3, ESR1, HRAS, HSP90AA1, JAK2, KDR, KRAS, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.5714
+
+Community 94 (size: 17):
+Nodes: AKT1, AR, BRAF, BRCA1, CDH1, CREBBP, EGFR, EP300, HRAS, HSP90AA1, KRAS, MTOR, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.6912
+
+Community 95 (size: 24):
+Nodes: AKT1, AR, ATM, BRAF, BRCA1, CASP8, CDH1, CDKN1B, CDKN2A, EGFR, ERBB3, ESR1, HRAS, HSP90AA1, JAK2, KRAS, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, SMAD4, TP53, TSC1
+Intraconnectivity: 0.5326
+
+Community 96 (size: 18):
+Nodes: AKT1, AR, ATM, BRAF, BRCA1, EGFR, EP300, ERBB3, ESR1, HRAS, JAK2, KDR, KRAS, MTOR, PIK3CA, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.6667
+
+Community 97 (size: 13):
+Nodes: AKT1, BRAF, BRCA1, CASP8, CDKN1B, CDKN2A, EP300, HSP90AA1, KRAS, NF1, NOTCH1, PTEN, TP53
+Intraconnectivity: 0.6667
+
+Community 98 (size: 12):
+Nodes: AKT1, CDKN2A, CREBBP, EGFR, ERBB3, ESR1, KDR, KLF4, KRAS, PTEN, SMAD4, TP53
+Intraconnectivity: 0.6667
+
+Community 99 (size: 10):
+Nodes: AKT1, ATM, CDKN1B, CDKN2A, EGFR, ERBB2, JAK2, MEN1, PTEN, RB1
+Intraconnectivity: 0.6222
+
+Community 100 (size: 9):
+Nodes: AKT1, ATM, CDKN1B, CDKN2A, EGFR, ERBB2, JAK2, RB1, TP53
+Intraconnectivity: 0.7500
+
+Community 101 (size: 10):
+Nodes: AKT1, ATM, BRCA1, CDKN2A, FBXW7, HSP90AA1, KDM6A, KRAS, NOTCH1, TP53
+Intraconnectivity: 0.6889
+
+Community 102 (size: 8):
+Nodes: ATM, BRCA1, BRCA2, CDKN2A, POLD1, PPM1D, PTEN, TP53
+Intraconnectivity: 0.7143
+
+Community 103 (size: 15):
+Nodes: AKT1, ATM, BRAF, BRCA1, BRCA2, CDKN2A, EP300, ERBB2, FBXW7, FGFR2, HSP90AA1, NF1, NOTCH1, PTEN, TP53
+Intraconnectivity: 0.6762
+
+Community 104 (size: 13):
+Nodes: AKT1, ATM, BRCA2, CDKN2A, CHEK2, EP300, ERBB2, HSP90AA1, KRAS, NF1, POLD1, PTEN, TP53
+Intraconnectivity: 0.6923
+
+Community 105 (size: 13):
+Nodes: ATM, BRCA1, BRCA2, CDKN1B, CDKN2A, FBXW7, FGFR2, HSP90AA1, KRAS, NF1, NOTCH1, PTEN, TP53
+Intraconnectivity: 0.6410
+
+Community 106 (size: 16):
+Nodes: AKT1, ATM, BRAF, BRCA1, BRCA2, CASP8, CDKN1B, CDKN2A, CHEK2, ERBB2, FBXW7, HSP90AA1, KRAS, NF1, NOTCH1, TP53
+Intraconnectivity: 0.6083
+
+Community 107 (size: 11):
+Nodes: ATM, BRAF, BRCA1, CDKN2A, CHEK2, ERBB2, KRAS, NF1, POLD1, PTEN, TP53
+Intraconnectivity: 0.7636
+
+Community 108 (size: 12):
+Nodes: AKT1, CDH1, CDKN2A, CREBBP, EGFR, ERBB2, ESR1, KDR, KLF4, KRAS, PTEN, SMAD4
+Intraconnectivity: 0.7121
+
+Community 109 (size: 12):
+Nodes: CDH1, CDKN2A, CREBBP, EGFR, ERBB3, ESR1, KDR, KLF4, KRAS, PTEN, SMAD4, TP53
+Intraconnectivity: 0.6667
+
+Community 110 (size: 12):
+Nodes: AFDN, AKT1, CDH1, CDKN2A, EGFR, ERBB2, ERBB3, ESR1, KDR, PTEN, SMAD4, TP53
+Intraconnectivity: 0.6667
+
+Community 111 (size: 12):
+Nodes: ATM, BRAF, BRCA1, BRCA2, CDKN2A, CHEK2, ERBB2, ESR1, KRAS, NF1, PIK3CA, PTEN
+Intraconnectivity: 0.8182
+
+Community 112 (size: 12):
+Nodes: ATM, BRAF, BRCA1, BRCA2, CDKN2A, CHEK2, ERBB2, ESR1, KRAS, NF1, PIK3CA, TP53
+Intraconnectivity: 0.8182
+
+Community 113 (size: 11):
+Nodes: BRAF, BRCA1, BRCA2, CDKN2A, CHEK2, ERBB2, KRAS, NF1, POLD1, PTEN, TP53
+Intraconnectivity: 0.7636
+
+Community 114 (size: 12):
+Nodes: ATM, BRCA2, CDKN2A, CHEK2, ERBB2, ESR1, KRAS, NF1, PIK3CA, POLD1, PTEN, TP53
+Intraconnectivity: 0.7424
+
+Community 115 (size: 5):
+Nodes: ASXL1, DNMT3A, JAK2, KDM6A, RUNX1
+Intraconnectivity: 0.5000
+
+Community 116 (size: 13):
+Nodes: AKT1, EGFR, ERBB2, ESR1, FBXW7, HSP90AA1, JAK2, KRAS, MTOR, PIK3CA, PIK3R1, TP53, TSC1
+Intraconnectivity: 0.7692
+
+Community 117 (size: 4):
+Nodes: CREBBP, EGFR, EP300, NOTCH2
+Intraconnectivity: 0.6667
+
+Community 118 (size: 10):
+Nodes: AR, ATM, CREBBP, CTCF, KDM6A, KLF4, KMT2C, KMT2D, NCOR1, TP53
+Intraconnectivity: 0.6222
+
+Community 119 (size: 8):
+Nodes: AR, EP300, KDM6A, KLF4, KMT2C, KMT2D, NCOR1, TP53
+Intraconnectivity: 0.8214
+
+Community 120 (size: 12):
+Nodes: AKT1, AR, CDKN2A, CREBBP, ESR1, KLF4, KRAS, NCOR1, NCOR2, NOTCH1, SMAD4, TP53
+Intraconnectivity: 0.6818
+
+Community 121 (size: 15):
+Nodes: AKT1, BRAF, CDH1, CDKN2A, EGFR, EP300, ERBB2, ESR1, HRAS, NF1, NOTCH1, PIK3CA, PTEN, SMAD4, TP53
+Intraconnectivity: 0.8000
+
+Community 122 (size: 12):
+Nodes: AKT1, AR, CDH1, CDKN2A, EP300, ESR1, KLF4, NCOR1, NCOR2, NOTCH1, SMAD4, TP53
+Intraconnectivity: 0.6818
+
+Community 123 (size: 13):
+Nodes: AKT1, CDKN2A, CREBBP, EGFR, EP300, ERBB2, HRAS, KRAS, NCOR2, PIK3CA, PTEN, SMAD4, TP53
+Intraconnectivity: 0.7308
+
+Community 124 (size: 20):
+Nodes: AKT1, AR, BRAF, CDH1, CDKN2A, CREBBP, EGFR, EP300, ERBB2, ESR1, HRAS, KLF4, KRAS, MEN1, NCOR1, NF1, NOTCH1, PIK3CA, PTEN, SMAD4
+Intraconnectivity: 0.5842
+
+Community 125 (size: 17):
+Nodes: AKT1, AR, BRAF, CDH1, CREBBP, EGFR, EP300, ERBB2, HRAS, KRAS, MEN1, NCOR1, NCOR2, PIK3CA, PTEN, SMAD4, TP53
+Intraconnectivity: 0.5735
+
+Community 126 (size: 15):
+Nodes: AKT1, AR, BRAF, CDH1, CDKN2A, EGFR, ERBB2, ESR1, HRAS, KRAS, NF1, NOTCH1, PIK3CA, SMAD4, TP53
+Intraconnectivity: 0.8000
+
+Community 127 (size: 7):
+Nodes: CDKN2A, CTCF, EP300, ESR1, FOXA1, KDM6A, NCOR1
+Intraconnectivity: 0.6667
+
+Community 128 (size: 7):
+Nodes: CDKN2A, CTCF, ESR1, FOXA1, KDM6A, NCOR1, TP53
+Intraconnectivity: 0.6667
+
+Community 129 (size: 7):
+Nodes: AKT1, CDH1, CREBBP, EP300, KDM6A, KLF4, SMAD4
+Intraconnectivity: 0.8095
+
+Community 130 (size: 6):
+Nodes: AKT1, CREBBP, KDM6A, KLF4, SMAD4, TP53
+Intraconnectivity: 0.8667
+
+Community 131 (size: 7):
+Nodes: AKT1, CDH1, EP300, KDM6A, KLF4, SMAD4, TP53
+Intraconnectivity: 0.8095
+
+Community 132 (size: 6):
+Nodes: AKT1, ATM, CASP8, CYLD, EGFR, PTEN
+Intraconnectivity: 0.6667
+
+Community 133 (size: 21):
+Nodes: AKT1, ALK, BRCA1, CSF1R, EGFR, ERBB2, ERBB3, ERBB4, ESR1, FGFR2, HRAS, HSP90AA1, JAK1, JAK2, KDR, KRAS, MTOR, NTRK1, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.6048
+
+Community 134 (size: 6):
+Nodes: CDKN1B, ESR1, KMT2C, KMT2D, MEN1, SMAD4
+Intraconnectivity: 0.5333
+
+Community 135 (size: 4):
+Nodes: KMT2D, MEN1, SMAD4, TP53
+Intraconnectivity: 0.8333
+
+Community 136 (size: 4):
+Nodes: CREBBP, H3C2, KAT6B, TP53
+Intraconnectivity: 0.6667
+
+Community 137 (size: 3):
+Nodes: H3C2, SETDB1, TP53
+Intraconnectivity: 0.6667
+
+Community 138 (size: 3):
+Nodes: EP300, H3C2, TP53
+Intraconnectivity: 1.0000
+
+Community 139 (size: 3):
+Nodes: AFDN, CDH1, HRAS
+Intraconnectivity: 0.6667
+
+Community 140 (size: 13):
+Nodes: AKT1, AR, ARID1A, ATM, BRCA1, CDKN2A, CREBBP, ESR1, GATA3, HSP90AA1, KRAS, RB1, TP53
+Intraconnectivity: 0.6410
+
+Community 141 (size: 17):
+Nodes: AKT1, ARID1A, ATM, BRCA1, BRCA2, CDKN2A, EGFR, EP300, ERBB2, ESR1, HSP90AA1, MAP3K1, NF1, PIK3CA, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.6765
+
+Community 142 (size: 9):
+Nodes: AKT1, AR, ARID1A, BRCA1, CDKN2A, EP300, ESR1, GATA3, TP53
+Intraconnectivity: 0.7500
+
+Community 143 (size: 22):
+Nodes: AKT1, AR, ARID1A, ATM, BRCA1, BRCA2, CDKN2A, CHEK2, CREBBP, EGFR, EP300, ERBB2, ESR1, GATA3, HSP90AA1, KRAS, MAP3K1, NF1, PIK3CA, PIK3R1, PTEN, RB1
+Intraconnectivity: 0.5281
+
+Community 144 (size: 15):
+Nodes: AKT1, AR, BRCA1, BRCA2, CREBBP, EGFR, EP300, ERBB2, GATA3, HSP90AA1, KRAS, PIK3CA, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.6857
+
+Community 145 (size: 20):
+Nodes: AKT1, AR, ARID1A, ATM, BAP1, BRCA1, BRCA2, CDKN2A, CHEK2, EGFR, ERBB2, ESR1, HSP90AA1, KRAS, MAP3K1, NF1, PIK3CA, PIK3R1, RB1, TP53
+Intraconnectivity: 0.5368
+
+Community 146 (size: 13):
+Nodes: AKT1, BRCA1, BRCA2, CDKN2A, CHEK2, EP300, ERBB2, HSP90AA1, KRAS, NF1, POLD1, PTEN, TP53
+Intraconnectivity: 0.6923
+
+Community 147 (size: 12):
+Nodes: ATM, BRCA1, CDKN2A, CHEK2, ERBB2, ESR1, KRAS, NF1, PIK3CA, POLD1, PTEN, TP53
+Intraconnectivity: 0.7424
+
+Community 148 (size: 7):
+Nodes: BRCA1, CREBBP, EP300, ESR1, FOXA1, GATA3, RUNX1
+Intraconnectivity: 0.8095
+
+Community 149 (size: 8):
+Nodes: BRCA1, CBFB, CREBBP, ESR1, FOXA1, GATA3, RUNX1, TP53
+Intraconnectivity: 0.6786
+
+Community 150 (size: 16):
+Nodes: AKT1, ARID1A, ATM, BRAF, BRCA2, CDKN2A, ESR1, FBXW7, GNAS, HRAS, HSP90AA1, KRAS, NF1, PIK3CA, PTEN, SMAD4
+Intraconnectivity: 0.6500
+
+Community 151 (size: 16):
+Nodes: AKT1, ARID1A, ATM, BRAF, BRCA2, CDKN2A, ESR1, FBXW7, GNAS, HRAS, HSP90AA1, NF1, PIK3CA, PTEN, SMAD4, TP53
+Intraconnectivity: 0.6500
+
+Community 152 (size: 3):
+Nodes: NCOR1, NOTCH1, SPEN
+Intraconnectivity: 0.6667
+
+Community 153 (size: 14):
+Nodes: AKT1, BRCA1, CREBBP, EP300, ESR1, FOXA1, HSP90AA1, KDM6A, KMT2D, NCOR1, NCOR2, RB1, SMAD4, TP53
+Intraconnectivity: 0.5714
+
+Community 154 (size: 10):
+Nodes: AR, ATM, CREBBP, CTCF, EP300, KLF4, KMT2C, KMT2D, NCOR1, TP53
+Intraconnectivity: 0.6222
+
+Community 155 (size: 12):
+Nodes: AKT1, AR, CDKN2A, CREBBP, EP300, ESR1, KLF4, KRAS, NCOR1, NCOR2, NOTCH1, TP53
+Intraconnectivity: 0.6818
+
+Community 156 (size: 13):
+Nodes: AKT1, ARID1A, ATM, BRCA1, CDKN2A, EP300, ESR1, FBXW7, HSP90AA1, KMT2C, NOTCH1, SMAD4, TP53
+Intraconnectivity: 0.6026
+
+Community 157 (size: 3):
+Nodes: EP300, H3C2, RUNX1
+Intraconnectivity: 0.6667
+
+Community 158 (size: 11):
+Nodes: AKT1, ATM, CDKN2A, CREBBP, EP300, FBXW7, KRAS, NCOR2, NOTCH2, SMAD4, TP53
+Intraconnectivity: 0.6364
+
+Community 159 (size: 11):
+Nodes: CBFB, CREBBP, EP300, ESR1, GATA3, KAT6B, KMT2C, KMT2D, NCOR1, NCOR2, TP53
+Intraconnectivity: 0.5636
+
+Community 160 (size: 13):
+Nodes: AR, CREBBP, CTCF, EP300, ESR1, HSP90AA1, KDM6A, KMT2C, KMT2D, NCOR2, RUNX1, SMAD4, TP53
+Intraconnectivity: 0.6410
+
+Community 161 (size: 16):
+Nodes: AKT1, AR, BRCA1, CREBBP, CTCF, EP300, FOXA1, GATA3, HSP90AA1, KMT2D, KRAS, NCOR1, NCOR2, RUNX1, SMAD4, TP53
+Intraconnectivity: 0.5500
+
+Community 162 (size: 9):
+Nodes: BRCA1, CDKN2A, CREBBP, EP300, KMT2C, KMT2D, KRAS, RB1, TP53
+Intraconnectivity: 0.7222
+
+Community 163 (size: 8):
+Nodes: BRCA1, CBFB, CREBBP, EP300, ESR1, FOXA1, RUNX1, TP53
+Intraconnectivity: 0.6786
+
+Community 164 (size: 10):
+Nodes: AKT1, BRCA1, CDKN2A, EP300, FBXW7, HSP90AA1, KDM6A, KRAS, NOTCH1, TP53
+Intraconnectivity: 0.6889
+
+Community 165 (size: 16):
+Nodes: AKT1, AR, BRCA1, CREBBP, EGFR, EP300, ERBB2, ESR1, FOXA1, HSP90AA1, KDM6A, KMT2D, NCOR1, PTEN, RB1, SMAD4
+Intraconnectivity: 0.5667
+
+Community 166 (size: 14):
+Nodes: AKT1, AR, BRCA1, CREBBP, ESR1, FOXA1, HSP90AA1, KDM6A, KMT2D, NCOR1, NCOR2, RB1, SMAD4, TP53
+Intraconnectivity: 0.5714
+
+Community 167 (size: 15):
+Nodes: AKT1, AR, BRCA1, CREBBP, EGFR, EP300, ERBB2, FOXA1, HSP90AA1, KMT2D, NCOR1, NCOR2, PTEN, SMAD4, TP53
+Intraconnectivity: 0.6095
+
+Community 168 (size: 10):
+Nodes: AKT1, AR, BRCA1, EGFR, ERBB2, ESR1, HSP90AA1, RB1, SMAD4, TP53
+Intraconnectivity: 0.8000
+
+Community 169 (size: 11):
+Nodes: AKT1, AR, BRCA1, EP300, ESR1, KDM6A, KMT2D, NCOR1, NCOR2, SMAD4, TP53
+Intraconnectivity: 0.7273
+
+Community 170 (size: 11):
+Nodes: ARID1A, CREBBP, EP300, FOXA1, KDM6A, KMT2C, KMT2D, KRAS, MEN1, NCOR1, RUNX1
+Intraconnectivity: 0.5636
+
+Community 171 (size: 10):
+Nodes: ARID1A, CREBBP, FOXA1, KDM6A, KMT2C, KMT2D, KRAS, NCOR1, RUNX1, TP53
+Intraconnectivity: 0.6444
+
+Community 172 (size: 7):
+Nodes: ARID1B, CREBBP, EP300, KMT2C, KMT2D, KRAS, TP53
+Intraconnectivity: 0.6667
+
+Community 173 (size: 5):
+Nodes: BRCA1, HRAS, KRAS, MAP3K1, PTEN
+Intraconnectivity: 0.9000
+
+Community 174 (size: 28):
+Nodes: AKT1, ALK, ARID1A, BRAF, BRCA1, BRCA2, CDKN2A, CSF1R, EGFR, ERBB2, ERBB3, ERBB4, ESR1, FBXW7, FGFR2, HRAS, HSP90AA1, JAK1, JAK2, KDR, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.5106
+
+Community 175 (size: 21):
+Nodes: AKT1, ALK, BRCA1, CSF1R, EGFR, ERBB2, ERBB3, ERBB4, ESR1, FGFR2, HRAS, HSP90AA1, JAK1, JAK2, KDR, KRAS, MTOR, NTRK1, PIK3CA, PTEN, TP53
+Intraconnectivity: 0.6048
+
+Community 176 (size: 26):
+Nodes: AKT1, ALK, ARID1A, BRAF, BRCA1, BRCA2, CDKN2A, EGFR, ERBB2, ERBB4, ESR1, FBXW7, FOXA1, HRAS, HSP90AA1, JAK1, JAK2, KDR, KRAS, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4
+Intraconnectivity: 0.5385
+
+Community 177 (size: 19):
+Nodes: AKT1, BRAF, BRCA1, BRCA2, EGFR, ERBB2, ERBB4, FGFR2, FOXA1, HRAS, HSP90AA1, KRAS, MTOR, NTRK1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.6082
+
+Community 178 (size: 24):
+Nodes: ALK, BRCA1, BRCA2, CDKN2A, EGFR, ERBB3, ERBB4, ESR1, FBXW7, FGFR2, HRAS, HSP90AA1, JAK1, JAK2, KRAS, MTOR, NF1, NOTCH1, NTRK1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.5507
+
+Community 179 (size: 5):
+Nodes: ARID1A, H3C2, NCOR1, RB1, SMARCD1
+Intraconnectivity: 0.5000
+
+Community 180 (size: 5):
+Nodes: ARID1A, ASXL1, DNMT3A, H3C2, RUNX1
+Intraconnectivity: 0.5000
+
+Community 181 (size: 3):
+Nodes: DNMT3A, SETDB1, TP53
+Intraconnectivity: 0.6667
+
+Community 182 (size: 4):
+Nodes: CBFB, EP300, GATA3, MYH11
+Intraconnectivity: 0.6667
+
+Community 183 (size: 12):
+Nodes: EGFR, ERBB2, ERBB3, ERBB4, ESR1, HRAS, KRAS, NCOR1, PIK3CA, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.8485
+
+Community 184 (size: 9):
+Nodes: AR, CREBBP, EP300, ESR1, NCOR2, RUNX1, SMAD4, SPEN, TBL1XR1
+Intraconnectivity: 0.6111
+
+Community 185 (size: 8):
+Nodes: AR, CREBBP, ESR1, NCOR1, NCOR2, NOTCH1, RUNX1, SMAD4
+Intraconnectivity: 0.7857
+
+Community 186 (size: 9):
+Nodes: AR, EP300, ESR1, NCOR1, NCOR2, NOTCH1, RUNX1, SMAD4, TBL1XR1
+Intraconnectivity: 0.6667
+
+Community 187 (size: 15):
+Nodes: AKT1, ATM, BRAF, BRCA1, BRCA2, CDKN2A, EGFR, ERBB2, FOXA1, HRAS, KRAS, NF1, PIK3CA, PTEN, SMAD4
+Intraconnectivity: 0.7524
+
+Community 188 (size: 12):
+Nodes: AKT1, AR, CDH1, CDKN2A, CREBBP, EP300, ESR1, KLF4, NCOR1, NCOR2, NOTCH1, TP53
+Intraconnectivity: 0.6818
+
+Community 189 (size: 12):
+Nodes: AR, CREBBP, EP300, ESR1, KDM6A, KMT2C, KMT2D, NCOR2, RUNX1, SMAD4, TBL1XR1, TP53
+Intraconnectivity: 0.6667
+
+Community 190 (size: 13):
+Nodes: AKT1, AR, BRCA1, CDH1, CREBBP, EP300, GATA3, KMT2D, NCOR1, NCOR2, RUNX1, SMAD4, TP53
+Intraconnectivity: 0.6410
+
+Community 191 (size: 9):
+Nodes: AR, CREBBP, EP300, ESR1, NCOR1, NOTCH1, RUNX1, SMAD4, TBL1XR1
+Intraconnectivity: 0.6667
+
+Community 192 (size: 4):
+Nodes: ARID1B, KMT2C, RB1, SMARCD1
+Intraconnectivity: 0.6667
+
+Community 193 (size: 11):
+Nodes: ATM, BRAF, CREBBP, EP300, ERBB2, FBXW7, KRAS, MTOR, NOTCH1, PIK3CA, PTEN
+Intraconnectivity: 0.6727
+
+Community 194 (size: 10):
+Nodes: ATM, BRAF, EP300, ERBB2, FBXW7, MTOR, NOTCH1, PIK3CA, PTEN, TP53
+Intraconnectivity: 0.7556
+
+Community 195 (size: 23):
+Nodes: AKT1, BRCA1, CDH1, CDKN2A, EGFR, ERBB2, ERBB3, ERBB4, ESR1, GNAS, HRAS, HSP90AA1, JAK1, JAK2, KDR, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.6126
+
+Community 196 (size: 11):
+Nodes: AKT1, CDKN2A, EGFR, ERBB2, HRAS, KRAS, NOTCH2, PIK3CA, PTEN, SMAD4, TP53
+Intraconnectivity: 0.8182
+
+Community 197 (size: 15):
+Nodes: AKT1, CDKN1B, EGFR, ERBB2, ERBB3, HRAS, HSP90AA1, JAK1, KDR, KRAS, MTOR, PIK3CA, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.7810
+
+Community 198 (size: 25):
+Nodes: AKT1, AR, BRCA1, CASP8, CDH1, CDKN1B, CDKN2A, EGFR, ERBB2, ERBB4, ESR1, GNAS, HRAS, HSP90AA1, JAK1, JAK2, KDR, KRAS, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4
+Intraconnectivity: 0.5333
+
+Community 199 (size: 22):
+Nodes: AR, BRCA1, CDH1, CDKN1B, CDKN2A, EGFR, ERBB3, ERBB4, ESR1, HRAS, HSP90AA1, JAK1, JAK2, KRAS, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.5974
+
+Community 200 (size: 23):
+Nodes: AKT1, AR, BRCA1, CASP8, CDH1, CDKN1B, CDKN2A, EGFR, ERBB2, ERBB3, ERBB4, ESR1, HRAS, HSP90AA1, JAK2, KRAS, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, SMAD4, TP53
+Intraconnectivity: 0.6047
+
+Community 201 (size: 22):
+Nodes: AR, BRCA1, CASP8, CDH1, CDKN1B, CDKN2A, EGFR, ERBB3, ESR1, HRAS, HSP90AA1, JAK2, KDR, KRAS, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.5714
+
+Community 202 (size: 17):
+Nodes: AKT1, AR, BRCA1, EGFR, ERBB2, ERBB3, ERBB4, ESR1, HRAS, JAK2, KDR, KRAS, MTOR, PIK3CA, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.7721
+
+Community 203 (size: 14):
+Nodes: AR, CREBBP, CTCF, EP300, ERBB4, ESR1, HSP90AA1, KDM6A, KMT2C, KMT2D, NCOR1, RUNX1, SMAD4, SMARCD1
+Intraconnectivity: 0.5275
+
+Community 204 (size: 12):
+Nodes: AR, CREBBP, CTCF, EP300, ERBB4, HSP90AA1, KMT2D, NCOR1, NCOR2, RUNX1, SMAD4, TP53
+Intraconnectivity: 0.6212
+
+Community 205 (size: 13):
+Nodes: AR, CREBBP, CTCF, ESR1, HSP90AA1, KDM6A, KMT2C, KMT2D, NCOR1, NCOR2, RUNX1, SMAD4, TP53
+Intraconnectivity: 0.6410
+
+Community 206 (size: 9):
+Nodes: AR, CREBBP, EP300, ESR1, NCOR1, RUNX1, SMAD4, SPEN, TBL1XR1
+Intraconnectivity: 0.6111
+
+Community 207 (size: 12):
+Nodes: AR, EP300, ESR1, KDM6A, KMT2C, KMT2D, NCOR1, NCOR2, RUNX1, SMAD4, TBL1XR1, TP53
+Intraconnectivity: 0.6667
+
+Community 208 (size: 11):
+Nodes: AR, ARID1A, CREBBP, EP300, ESR1, KDM6A, KMT2C, KMT2D, MEN1, NCOR1, RUNX1
+Intraconnectivity: 0.6909
+
+Community 209 (size: 8):
+Nodes: AR, CREBBP, EP300, KMT2D, MEN1, NCOR1, RUNX1, TP53
+Intraconnectivity: 0.7857
+
+Community 210 (size: 10):
+Nodes: AR, ARID1A, CREBBP, ESR1, KDM6A, KMT2C, KMT2D, NCOR1, RUNX1, TP53
+Intraconnectivity: 0.7778
+
+Community 211 (size: 10):
+Nodes: AR, ARID1A, EP300, ESR1, KDM6A, KMT2C, KMT2D, NCOR1, RUNX1, TP53
+Intraconnectivity: 0.7778
+
+Community 212 (size: 25):
+Nodes: ALK, ATM, BRCA1, BRCA2, CDH1, CDKN2A, EGFR, ERBB2, ERBB3, ERBB4, ESR1, FBXW7, FGFR2, HRAS, HSP90AA1, JAK1, JAK2, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.5600
+
+Community 213 (size: 15):
+Nodes: ALK, CDKN1B, EGFR, ERBB2, ERBB3, FGFR2, HRAS, HSP90AA1, JAK1, KRAS, MTOR, PIK3CA, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.7429
+
+Community 214 (size: 25):
+Nodes: ALK, AR, ATM, BRCA1, BRCA2, CDH1, CDKN1B, CDKN2A, EGFR, ERBB2, ERBB4, ESR1, FBXW7, HRAS, HSP90AA1, JAK1, JAK2, KRAS, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4
+Intraconnectivity: 0.5367
+
+Community 215 (size: 22):
+Nodes: AR, BRCA1, CDH1, CDKN1B, CDKN2A, ERBB2, ERBB3, ERBB4, ESR1, HRAS, HSP90AA1, JAK1, JAK2, KRAS, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.5974
+
+Community 216 (size: 24):
+Nodes: ALK, BRCA1, BRCA2, CDKN2A, EGFR, ERBB2, ERBB3, ERBB4, ESR1, FBXW7, FGFR2, HRAS, HSP90AA1, JAK1, JAK2, KRAS, MTOR, NF1, NOTCH1, NTRK1, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.5507
+
+Community 217 (size: 18):
+Nodes: AR, BRCA1, BRCA2, CDH1, EGFR, ERBB2, ERBB4, FGFR2, HRAS, HSP90AA1, KRAS, MTOR, NTRK1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.6209
+
+Community 218 (size: 25):
+Nodes: ALK, AR, ATM, BRCA1, BRCA2, CDH1, CDKN1B, CDKN2A, EGFR, ERBB2, ERBB3, ERBB4, ESR1, FBXW7, HRAS, HSP90AA1, JAK2, KRAS, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, SMAD4, TP53
+Intraconnectivity: 0.5467
+
+Community 219 (size: 13):
+Nodes: BRCA1, BRCA2, CDKN1B, CDKN2A, ERBB2, FBXW7, FGFR2, HSP90AA1, KRAS, NF1, NOTCH1, PTEN, TP53
+Intraconnectivity: 0.6410
+
+Community 220 (size: 13):
+Nodes: AKT1, EGFR, ERBB2, ESR1, FBXW7, HSP90AA1, JAK2, KRAS, PIK3CA, PIK3R1, PTEN, TP53, TSC1
+Intraconnectivity: 0.7692
+
+Community 221 (size: 27):
+Nodes: AKT1, ALK, ARID1A, ATM, BRAF, BRCA1, BRCA2, CDH1, CDKN2A, EGFR, ERBB2, ERBB3, ERBB4, ESR1, FBXW7, HRAS, HSP90AA1, JAK2, MAP3K1, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.5470
+
+Community 222 (size: 14):
+Nodes: AKT1, ALK, CDKN1B, EGFR, ERBB2, ERBB3, HRAS, HSP90AA1, KRAS, MTOR, PIK3CA, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.8242
+
+Community 223 (size: 20):
+Nodes: AKT1, AR, ARID1A, ATM, BAP1, BRCA2, CDKN2A, CHEK2, EGFR, ERBB2, ESR1, HSP90AA1, KRAS, MAP3K1, NF1, PIK3CA, PIK3R1, PTEN, RB1, TP53
+Intraconnectivity: 0.5368
+
+Community 224 (size: 23):
+Nodes: AKT1, AR, BRCA1, CASP8, CDH1, CDKN1B, CDKN2A, ERBB2, ERBB3, ERBB4, ESR1, HRAS, HSP90AA1, JAK2, KRAS, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.6047
+
+Community 225 (size: 18):
+Nodes: AKT1, AR, BRAF, BRCA1, BRCA2, CDH1, EGFR, ERBB2, ERBB4, HRAS, HSP90AA1, KRAS, MTOR, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.7124
+
+Community 226 (size: 25):
+Nodes: ALK, AR, ATM, BRCA1, BRCA2, CDH1, CDKN1B, CDKN2A, EGFR, ERBB3, ERBB4, ESR1, FBXW7, HRAS, HSP90AA1, JAK2, KRAS, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53
+Intraconnectivity: 0.5467
+
+Community 227 (size: 24):
+Nodes: AR, ATM, BRAF, BRCA1, CASP8, CDH1, CDKN1B, CDKN2A, EGFR, ERBB3, ESR1, HRAS, HSP90AA1, JAK2, KRAS, MTOR, NF1, NOTCH1, PIK3CA, PIK3R1, PTEN, SMAD4, TP53, TSC1
+Intraconnectivity: 0.5326
+
+Community 228 (size: 19):
+Nodes: AKT1, ALK, AR, ATM, BRAF, BRCA1, EGFR, ERBB2, ERBB3, ERBB4, ESR1, HRAS, JAK2, KRAS, MTOR, PIK3CA, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.7018
+
+Community 229 (size: 16):
+Nodes: AKT1, BRAF, BRCA1, BRCA2, CASP8, CDKN1B, CDKN2A, CHEK2, ERBB2, FBXW7, HSP90AA1, KRAS, NF1, NOTCH1, PTEN, TP53
+Intraconnectivity: 0.6083
+
+Community 230 (size: 9):
+Nodes: AR, ARID1A, BRCA1, CDKN1B, CDKN2A, EP300, PTEN, RB1, SMARCD1
+Intraconnectivity: 0.6389
+
+Community 231 (size: 8):
+Nodes: ARID1B, BRCA1, CDKN2A, EP300, PTEN, RB1, SMARCD1, TP53
+Intraconnectivity: 0.6429
+
+Community 232 (size: 7):
+Nodes: AR, ARID1A, BRCA1, CDKN1B, CDKN2A, RB1, TP53
+Intraconnectivity: 0.7619
+
+Community 233 (size: 9):
+Nodes: AR, CTCF, EP300, ESR1, FOXA1, GATA3, KMT2C, NF1, PIK3CA
+Intraconnectivity: 0.5000
+
+Community 234 (size: 7):
+Nodes: AR, CTCF, EP300, FOXA1, GATA3, PIK3CA, TP53
+Intraconnectivity: 0.6667
+
+Community 235 (size: 7):
+Nodes: AR, CTCF, ESR1, FOXA1, GATA3, KMT2C, TP53
+Intraconnectivity: 0.6667
+
+Community 236 (size: 9):
+Nodes: AKT1, AR, ATM, BRCA1, ESR1, HSP90AA1, KRAS, NCOR1, TP53
+Intraconnectivity: 0.8056
+
+Community 237 (size: 20):
+Nodes: AKT1, ALK, ATM, BRAF, BRCA1, EGFR, EP300, ERBB2, ERBB3, ERBB4, ESR1, HRAS, HSP90AA1, JAK2, KDR, MTOR, PIK3CA, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.6632
+
+Community 238 (size: 21):
+Nodes: AKT1, ALK, AR, ATM, BRAF, BRCA1, EGFR, EP300, ERBB2, ERBB4, ESR1, HRAS, HSP90AA1, JAK2, KDR, KRAS, MTOR, NCOR1, PIK3CA, PIK3R1, PTEN
+Intraconnectivity: 0.6143
+
+Community 239 (size: 17):
+Nodes: AKT1, AR, BRCA1, ERBB2, ERBB3, ERBB4, ESR1, HRAS, HSP90AA1, JAK2, KDR, KRAS, MTOR, PIK3CA, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.7721
+
+Community 240 (size: 17):
+Nodes: AKT1, AR, BRAF, BRCA1, EGFR, EP300, ERBB2, ERBB4, HRAS, HSP90AA1, KRAS, MTOR, NCOR1, PIK3CA, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.7059
+
+Community 241 (size: 19):
+Nodes: AKT1, ALK, AR, ATM, BRAF, BRCA1, EGFR, ERBB2, ERBB3, ERBB4, ESR1, HRAS, HSP90AA1, JAK2, KRAS, MTOR, PIK3CA, PIK3R1, TP53
+Intraconnectivity: 0.7018
+
+Community 242 (size: 18):
+Nodes: AR, ATM, BRAF, BRCA1, EGFR, EP300, ERBB3, ESR1, HRAS, HSP90AA1, JAK2, KDR, KRAS, MTOR, PIK3CA, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.6667
+
+Community 243 (size: 12):
+Nodes: EGFR, ERBB2, ERBB3, ESR1, HRAS, HSP90AA1, KRAS, NCOR1, PIK3CA, PIK3R1, PTEN, TP53
+Intraconnectivity: 0.8485
+
+Overlapping Nodes:
+BRCA1: Communities [0, 1, 2, 7, 8, 9, 10, 11, 12, 13, 14, 17, 33, 34, 35, 36, 37, 38, 43, 52, 56, 57, 59, 63, 64, 66, 69, 70, 72, 73, 75, 76, 77, 79, 80, 82, 84, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 100, 101, 102, 104, 105, 106, 110, 111, 112, 132, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 152, 155, 160, 161, 162, 163, 164, 165, 166, 167, 168, 172, 173, 174, 175, 176, 177, 186, 189, 194, 197, 198, 199, 200, 201, 211, 213, 214, 215, 216, 217, 218, 220, 223, 224, 225, 226, 227, 228, 229, 230, 231, 235, 236, 237, 238, 239, 240, 241]
+CDKN2A: Communities [0, 1, 2, 3, 4, 7, 8, 10, 11, 12, 13, 15, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 33, 34, 35, 36, 37, 38, 44, 46, 47, 54, 56, 57, 59, 63, 64, 67, 68, 69, 70, 82, 84, 86, 87, 88, 89, 90, 91, 92, 94, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 119, 120, 121, 122, 123, 125, 126, 127, 139, 140, 141, 142, 144, 145, 146, 149, 150, 154, 155, 157, 161, 163, 173, 175, 177, 186, 187, 194, 195, 197, 198, 199, 200, 211, 213, 214, 215, 217, 218, 220, 222, 223, 225, 226, 228, 229, 230, 231]
+PPM1D: Communities [0, 1, 101]
+ATM: Communities [0, 2, 131, 4, 10, 139, 12, 13, 14, 15, 140, 142, 144, 146, 149, 22, 150, 24, 153, 26, 155, 157, 33, 34, 35, 37, 47, 49, 52, 54, 55, 186, 59, 63, 192, 193, 66, 67, 69, 70, 211, 213, 88, 89, 217, 91, 220, 94, 95, 222, 225, 98, 99, 100, 101, 102, 103, 104, 105, 106, 226, 227, 235, 110, 111, 236, 113, 237, 240, 241, 117]
+CHEK2: Communities [0, 1, 142, 144, 145, 146, 35, 37, 38, 52, 54, 69, 222, 228, 103, 105, 106, 110, 111, 112, 113]
+BRCA2: Communities [0, 1, 8, 9, 10, 12, 140, 142, 15, 143, 17, 144, 145, 149, 150, 34, 35, 37, 38, 173, 175, 176, 177, 52, 54, 57, 186, 59, 70, 75, 77, 79, 80, 211, 213, 215, 216, 217, 218, 220, 222, 224, 225, 228, 101, 102, 103, 104, 105, 110, 111, 112, 113]
+PTEN: Communities [0, 1, 3, 4, 6, 7, 8, 9, 10, 11, 13, 14, 15, 17, 18, 19, 20, 23, 24, 26, 27, 29, 30, 31, 34, 35, 36, 38, 43, 44, 47, 49, 51, 52, 54, 55, 56, 57, 59, 63, 64, 66, 67, 68, 69, 70, 73, 74, 75, 77, 79, 84, 86, 89, 91, 92, 93, 95, 96, 97, 98, 101, 102, 103, 104, 106, 107, 108, 109, 110, 112, 113, 120, 122, 123, 124, 131, 132, 140, 142, 143, 145, 146, 149, 150, 164, 166, 172, 173, 174, 175, 176, 177, 182, 186, 192, 193, 194, 195, 196, 197, 198, 200, 201, 211, 212, 213, 214, 215, 216, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 236, 237, 238, 239, 241, 242]
+TP53: Communities [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 22, 23, 24, 25, 27, 30, 31, 32, 33, 34, 36, 37, 38, 40, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 84, 85, 86, 87, 88, 89, 90, 92, 93, 94, 95, 96, 97, 99, 100, 101, 102, 103, 104, 105, 106, 108, 109, 111, 112, 113, 115, 117, 118, 119, 120, 121, 122, 124, 125, 127, 129, 130, 132, 134, 135, 136, 137, 139, 140, 141, 143, 144, 145, 146, 148, 150, 152, 153, 154, 155, 157, 158, 159, 160, 161, 162, 163, 165, 166, 167, 168, 170, 171, 173, 174, 176, 177, 180, 182, 187, 188, 189, 193, 194, 195, 196, 198, 199, 200, 201, 203, 204, 206, 208, 209, 210, 211, 212, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 230, 231, 233, 234, 235, 236, 238, 239, 240, 241, 242]
+POLD1: Communities [1, 101, 103, 106, 112, 113, 145, 146]
+NOTCH1: Communities [2, 3, 7, 8, 10, 12, 13, 17, 19, 20, 22, 23, 24, 25, 26, 27, 28, 151, 154, 155, 33, 34, 35, 163, 37, 38, 44, 173, 175, 177, 52, 55, 56, 57, 184, 59, 185, 187, 190, 63, 192, 193, 194, 197, 198, 199, 200, 211, 213, 214, 215, 88, 89, 90, 91, 92, 217, 94, 218, 96, 220, 223, 225, 100, 226, 102, 228, 104, 105, 119, 120, 121, 123, 125]
+ESR1: Communities [2, 3, 7, 8, 10, 12, 13, 14, 15, 18, 19, 20, 39, 40, 42, 43, 44, 46, 50, 53, 54, 56, 57, 58, 59, 60, 63, 65, 66, 68, 69, 72, 73, 74, 75, 76, 77, 78, 79, 80, 88, 89, 90, 91, 92, 94, 95, 97, 107, 108, 109, 110, 111, 113, 115, 119, 120, 121, 123, 125, 126, 127, 132, 133, 139, 140, 141, 142, 144, 146, 147, 148, 149, 150, 152, 154, 155, 158, 159, 162, 164, 165, 167, 168, 173, 174, 175, 177, 182, 183, 184, 185, 187, 188, 190, 194, 197, 198, 199, 200, 201, 202, 204, 205, 206, 207, 209, 210, 211, 213, 214, 215, 217, 219, 220, 222, 223, 225, 226, 227, 232, 234, 235, 236, 237, 238, 240, 241, 242]
+ARID1A: Communities [2, 8, 139, 12, 140, 141, 15, 142, 144, 149, 150, 155, 33, 34, 35, 37, 169, 170, 45, 173, 175, 178, 179, 52, 54, 57, 58, 61, 62, 64, 207, 81, 82, 83, 84, 85, 86, 87, 209, 210, 220, 222, 229, 231]
+AKT1: Communities [2, 3, 4, 5, 6, 7, 8, 9, 12, 14, 15, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 29, 30, 32, 33, 34, 35, 37, 38, 43, 44, 47, 48, 49, 51, 52, 54, 56, 57, 66, 67, 68, 70, 72, 73, 74, 75, 76, 77, 80, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 102, 103, 105, 107, 109, 115, 119, 120, 121, 122, 123, 124, 125, 128, 129, 130, 131, 132, 139, 140, 141, 142, 143, 144, 145, 149, 150, 152, 154, 155, 157, 160, 163, 164, 165, 166, 167, 168, 173, 174, 175, 176, 186, 187, 189, 194, 195, 196, 197, 199, 201, 219, 220, 221, 222, 223, 224, 227, 228, 235, 236, 237, 238, 239, 240]
+SMAD4: Communities [2, 3, 4, 7, 8, 9, 10, 12, 13, 15, 18, 19, 20, 22, 24, 25, 26, 27, 28, 33, 34, 35, 37, 43, 47, 48, 50, 52, 56, 57, 59, 60, 63, 68, 70, 72, 73, 75, 76, 77, 78, 79, 80, 88, 89, 90, 91, 92, 93, 94, 97, 107, 108, 109, 119, 120, 121, 122, 123, 124, 125, 128, 129, 130, 133, 134, 149, 150, 152, 155, 157, 159, 160, 164, 165, 166, 167, 168, 173, 175, 176, 177, 183, 184, 185, 186, 188, 189, 190, 194, 195, 197, 198, 199, 200, 202, 203, 204, 205, 206, 211, 213, 214, 215, 216, 217, 220, 223, 224, 225, 226]
+KMT2C: Communities [2, 133, 11, 153, 155, 158, 159, 161, 39, 40, 169, 42, 170, 171, 50, 53, 58, 60, 188, 191, 65, 202, 204, 206, 207, 209, 82, 83, 210, 86, 87, 232, 234, 117, 118]
+HSP90AA1: Communities [2, 3, 5, 6, 7, 8, 9, 10, 12, 13, 15, 17, 19, 20, 29, 30, 31, 32, 43, 51, 54, 56, 57, 59, 60, 63, 72, 73, 75, 77, 78, 79, 80, 88, 89, 91, 92, 93, 94, 96, 100, 102, 103, 104, 105, 115, 132, 139, 140, 142, 143, 144, 145, 149, 150, 152, 155, 159, 160, 163, 164, 165, 166, 167, 173, 174, 175, 176, 177, 194, 196, 197, 198, 199, 200, 202, 203, 204, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 228, 235, 236, 237, 238, 239, 240, 241, 242]
+KRAS: Communities [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 20, 22, 23, 26, 27, 29, 30, 31, 32, 33, 35, 36, 37, 38, 44, 45, 47, 51, 52, 54, 55, 56, 57, 59, 63, 66, 68, 69, 70, 72, 74, 77, 79, 80, 82, 85, 88, 91, 92, 93, 94, 95, 96, 97, 100, 103, 104, 105, 106, 107, 108, 110, 111, 112, 113, 115, 119, 122, 123, 124, 125, 132, 139, 142, 143, 144, 145, 146, 149, 154, 157, 160, 161, 163, 169, 170, 171, 172, 174, 175, 176, 177, 182, 186, 192, 195, 196, 197, 198, 199, 200, 201, 212, 213, 214, 215, 216, 217, 218, 219, 221, 222, 223, 224, 225, 226, 227, 228, 235, 237, 238, 239, 240, 241, 242]
+FBXW7: Communities [2, 4, 8, 10, 12, 15, 17, 149, 22, 150, 24, 25, 26, 155, 157, 163, 173, 47, 175, 177, 57, 59, 192, 193, 211, 213, 215, 217, 218, 219, 220, 225, 100, 228, 102, 104, 105, 115]
+EGFR: Communities [3, 4, 5, 6, 8, 9, 10, 12, 13, 14, 16, 18, 19, 20, 23, 24, 26, 29, 31, 32, 34, 35, 37, 43, 44, 47, 49, 51, 52, 54, 57, 59, 63, 66, 67, 68, 70, 73, 74, 75, 77, 79, 80, 89, 91, 93, 94, 95, 97, 98, 99, 107, 108, 109, 115, 116, 120, 122, 123, 124, 125, 131, 132, 140, 142, 143, 144, 164, 166, 167, 173, 174, 175, 176, 177, 182, 186, 194, 195, 196, 197, 198, 199, 200, 201, 211, 212, 213, 215, 216, 217, 219, 220, 221, 222, 224, 225, 226, 227, 236, 237, 239, 240, 241, 242]
+PIK3CA: Communities [3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 19, 20, 23, 24, 26, 27, 29, 30, 31, 32, 34, 35, 36, 37, 44, 47, 51, 52, 54, 55, 56, 59, 63, 65, 66, 69, 70, 74, 75, 79, 80, 86, 89, 91, 92, 93, 94, 95, 110, 111, 113, 115, 120, 122, 123, 124, 125, 140, 142, 143, 144, 146, 149, 150, 173, 174, 175, 176, 177, 182, 186, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 211, 212, 213, 214, 216, 217, 219, 220, 221, 222, 223, 224, 225, 226, 227, 232, 233, 236, 237, 238, 239, 240, 241, 242]
+FGFR2: Communities [3, 4, 132, 6, 8, 9, 10, 16, 17, 19, 24, 31, 173, 174, 176, 177, 75, 77, 79, 211, 212, 215, 216, 218, 102, 104]
+ERBB2: Communities [3, 4, 6, 7, 8, 9, 12, 14, 16, 17, 18, 19, 20, 23, 24, 26, 27, 29, 30, 32, 34, 35, 37, 38, 43, 44, 47, 51, 52, 54, 55, 56, 57, 66, 67, 68, 69, 70, 73, 74, 75, 77, 80, 98, 99, 102, 103, 105, 106, 107, 109, 110, 111, 112, 113, 115, 120, 122, 123, 124, 125, 132, 140, 142, 143, 144, 145, 146, 164, 166, 167, 173, 174, 175, 176, 182, 186, 192, 193, 194, 195, 196, 197, 199, 201, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 227, 228, 236, 237, 238, 239, 240, 242]
+ALK: Communities [3, 132, 6, 8, 10, 12, 14, 16, 19, 20, 29, 31, 32, 173, 174, 175, 177, 51, 57, 59, 66, 211, 212, 213, 215, 217, 220, 221, 225, 227, 236, 237, 240]
+ERBB4: Communities [3, 132, 7, 8, 9, 10, 12, 14, 19, 20, 173, 174, 175, 176, 177, 182, 56, 57, 59, 60, 66, 194, 197, 198, 199, 201, 202, 75, 203, 77, 78, 79, 80, 211, 213, 214, 215, 216, 217, 220, 223, 224, 225, 227, 236, 237, 238, 239, 240]
+ERBB3: Communities [3, 132, 6, 7, 8, 10, 12, 13, 14, 16, 18, 19, 30, 31, 32, 173, 174, 177, 182, 194, 196, 198, 199, 200, 201, 211, 212, 214, 215, 89, 217, 92, 220, 94, 95, 221, 97, 223, 225, 226, 227, 108, 109, 236, 238, 240, 241, 242]
+BRAF: Communities [3, 8, 9, 11, 12, 13, 14, 17, 19, 20, 149, 150, 34, 35, 36, 37, 38, 44, 173, 175, 176, 52, 55, 57, 186, 63, 192, 193, 66, 69, 70, 74, 75, 77, 80, 86, 89, 91, 220, 93, 94, 95, 96, 224, 226, 227, 228, 102, 105, 106, 236, 237, 110, 111, 112, 239, 240, 241, 120, 123, 124, 125]
+MAP3K1: Communities [3, 12, 140, 142, 172, 144, 19, 20, 54, 220, 222]
+ARHGEF12: Communities [19, 3]
+PIK3R1: Communities [3, 132, 5, 6, 7, 8, 9, 10, 12, 13, 14, 140, 16, 142, 143, 19, 20, 144, 29, 30, 31, 32, 173, 175, 176, 177, 51, 54, 182, 56, 57, 59, 63, 66, 194, 196, 197, 198, 199, 200, 201, 75, 77, 79, 80, 211, 212, 213, 214, 215, 216, 89, 217, 91, 92, 93, 94, 95, 219, 220, 221, 222, 223, 224, 225, 226, 227, 236, 237, 238, 239, 240, 241, 242, 115]
+JAK2: Communities [3, 132, 5, 7, 8, 10, 12, 13, 14, 16, 19, 20, 29, 30, 31, 32, 173, 174, 175, 177, 56, 57, 59, 63, 66, 67, 194, 197, 198, 71, 199, 200, 201, 211, 213, 214, 215, 89, 217, 91, 92, 219, 94, 95, 220, 223, 98, 99, 225, 226, 227, 236, 237, 238, 240, 241, 114, 115]
+AFDN: Communities [3, 138, 109, 18, 19]
+GNAS: Communities [194, 3, 197, 7, 15, 19, 20, 149, 150, 56]
+NF1: Communities [3, 7, 8, 10, 12, 13, 140, 15, 142, 17, 144, 19, 20, 145, 146, 149, 150, 34, 35, 37, 38, 44, 173, 175, 177, 52, 54, 56, 57, 186, 59, 63, 65, 194, 69, 197, 198, 199, 200, 211, 213, 214, 215, 89, 217, 91, 92, 218, 94, 220, 96, 222, 223, 225, 226, 228, 102, 103, 104, 105, 106, 232, 110, 111, 112, 113, 120, 123, 125]
+EP300: Communities [4, 9, 11, 13, 14, 17, 23, 24, 25, 26, 28, 34, 35, 36, 38, 39, 41, 42, 43, 44, 45, 46, 47, 48, 52, 53, 54, 55, 58, 60, 63, 64, 65, 66, 73, 74, 75, 76, 78, 84, 85, 86, 87, 89, 90, 91, 93, 95, 96, 102, 103, 116, 118, 120, 121, 122, 123, 124, 126, 128, 130, 137, 140, 141, 142, 143, 145, 147, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 166, 168, 169, 171, 181, 183, 185, 187, 188, 189, 190, 192, 193, 202, 203, 205, 206, 207, 208, 210, 229, 230, 232, 233, 236, 237, 239, 241]
+HRAS: Communities [4, 6, 7, 8, 9, 10, 12, 13, 14, 15, 19, 20, 23, 24, 26, 27, 29, 30, 31, 32, 34, 35, 37, 44, 47, 51, 52, 56, 57, 59, 63, 66, 70, 74, 75, 77, 79, 80, 89, 91, 92, 93, 94, 95, 120, 122, 123, 124, 125, 132, 138, 149, 150, 172, 173, 174, 175, 176, 177, 182, 186, 194, 195, 196, 197, 198, 199, 200, 201, 211, 212, 213, 214, 215, 216, 217, 220, 221, 223, 224, 225, 226, 227, 236, 237, 238, 239, 240, 241, 242]
+JAK1: Communities [132, 5, 6, 7, 8, 10, 29, 30, 31, 173, 174, 175, 177, 51, 56, 57, 59, 194, 196, 197, 198, 211, 212, 213, 214, 215]
+CDH1: Communities [128, 130, 5, 7, 9, 10, 138, 12, 13, 34, 35, 37, 44, 48, 52, 56, 59, 187, 189, 63, 194, 197, 198, 199, 200, 74, 75, 76, 79, 80, 211, 213, 214, 216, 89, 90, 91, 92, 93, 94, 217, 220, 223, 224, 225, 226, 107, 108, 109, 120, 121, 123, 124, 125]
+MTOR: Communities [132, 6, 7, 8, 9, 10, 12, 13, 14, 29, 30, 31, 32, 173, 174, 175, 176, 177, 51, 55, 56, 57, 59, 63, 192, 193, 66, 194, 196, 197, 198, 199, 200, 201, 75, 77, 79, 80, 211, 212, 213, 214, 215, 216, 89, 217, 91, 92, 93, 94, 95, 220, 221, 223, 224, 225, 226, 227, 236, 237, 238, 239, 240, 241, 115]
+KDR: Communities [132, 6, 7, 8, 13, 14, 16, 18, 29, 30, 173, 174, 175, 51, 56, 57, 63, 66, 194, 68, 196, 197, 200, 201, 89, 91, 92, 95, 97, 107, 108, 109, 236, 237, 238, 241]
+CSF1R: Communities [8, 132, 173, 174]
+KAT6B: Communities [40, 21, 158, 135]
+RUNX1: Communities [147, 148, 21, 156, 159, 160, 162, 39, 40, 41, 42, 169, 170, 45, 179, 183, 184, 185, 58, 60, 61, 188, 189, 190, 71, 72, 202, 203, 76, 204, 78, 205, 206, 207, 208, 209, 210, 114]
+H3C2: Communities [135, 136, 137, 178, 179, 21, 156, 61, 62]
+NOTCH2: Communities [195, 116, 22, 25, 27, 157]
+NCOR2: Communities [22, 23, 152, 25, 154, 157, 158, 159, 160, 165, 166, 40, 168, 42, 183, 184, 185, 187, 188, 189, 72, 73, 74, 203, 76, 204, 78, 206, 119, 121, 122, 124]
+CREBBP: Communities [22, 23, 26, 28, 33, 35, 36, 39, 40, 43, 44, 45, 47, 48, 52, 53, 54, 55, 58, 60, 63, 68, 72, 73, 74, 78, 82, 85, 88, 91, 93, 97, 107, 108, 116, 117, 119, 122, 123, 124, 128, 129, 135, 139, 142, 143, 147, 148, 152, 153, 154, 157, 158, 159, 160, 161, 162, 164, 165, 166, 169, 170, 171, 183, 184, 187, 188, 189, 190, 192, 202, 203, 204, 205, 207, 208, 209]
+SPEN: Communities [183, 28, 205, 151]
+CDKN1B: Communities [133, 29, 30, 31, 32, 35, 37, 38, 50, 51, 52, 56, 59, 63, 64, 196, 197, 198, 199, 200, 212, 213, 214, 217, 218, 91, 92, 221, 94, 223, 96, 225, 98, 99, 226, 228, 229, 231, 104, 105]
+ASXL1: Communities [39, 29, 51, 114, 53, 179, 61]
+RB1: Communities [139, 142, 144, 152, 33, 161, 35, 36, 37, 164, 165, 167, 43, 178, 52, 54, 62, 191, 67, 81, 82, 83, 222, 98, 99, 229, 230, 231]
+CTCF: Communities [153, 159, 160, 33, 35, 52, 60, 65, 72, 202, 203, 204, 78, 232, 233, 234, 117, 126, 127]
+KMT2D: Communities [133, 134, 152, 153, 158, 159, 160, 161, 164, 165, 166, 39, 40, 168, 42, 43, 169, 45, 170, 171, 50, 53, 60, 188, 189, 72, 73, 202, 203, 76, 204, 78, 206, 207, 208, 82, 209, 210, 85, 87, 117, 118]
+NCOR1: Communities [151, 152, 153, 154, 158, 160, 164, 165, 166, 39, 40, 168, 42, 43, 44, 45, 46, 169, 170, 178, 53, 182, 184, 185, 58, 187, 189, 62, 190, 66, 72, 73, 74, 202, 76, 203, 204, 205, 206, 207, 208, 209, 210, 235, 237, 239, 242, 117, 118, 119, 121, 123, 124, 126, 127]
+DNMT3A: Communities [71, 39, 114, 179, 180, 53]
+GATA3: Communities [139, 141, 142, 143, 147, 148, 158, 160, 39, 40, 41, 42, 53, 54, 181, 189, 65, 72, 76, 232, 233, 234]
+CBFB: Communities [162, 40, 148, 181, 158]
+MYH11: Communities [41, 181]
+KDM6A: Communities [128, 129, 130, 152, 159, 163, 164, 165, 168, 169, 170, 43, 45, 46, 48, 58, 60, 188, 71, 202, 204, 206, 207, 209, 210, 100, 114, 117, 118, 126, 127]
+FOXA1: Communities [147, 148, 152, 160, 162, 164, 165, 166, 169, 170, 43, 45, 46, 175, 176, 57, 186, 70, 72, 73, 77, 232, 233, 234, 126, 127]
+AR: Communities [44, 54, 56, 58, 59, 60, 63, 64, 65, 66, 72, 74, 76, 78, 79, 80, 88, 90, 91, 92, 93, 94, 95, 117, 118, 119, 121, 123, 124, 125, 139, 141, 142, 143, 144, 153, 154, 159, 160, 164, 165, 166, 167, 168, 183, 184, 185, 187, 188, 189, 190, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 213, 214, 216, 217, 222, 223, 224, 225, 226, 227, 229, 231, 232, 233, 234, 235, 237, 238, 239, 240, 241]
+KLF4: Communities [128, 129, 130, 153, 154, 44, 187, 63, 68, 88, 90, 91, 97, 107, 108, 117, 118, 119, 121, 123]
+MEN1: Communities [98, 67, 133, 134, 169, 74, 44, 45, 207, 208, 58, 123, 124]
+CYLD: Communities [49, 131]
+CASP8: Communities [96, 223, 131, 226, 197, 228, 199, 200, 105, 56, 91, 92, 94, 63]
+SMARCD1: Communities [64, 229, 230, 202, 178, 83, 84, 60, 191]
+NTRK1: Communities [132, 77, 174, 79, 176, 177, 215, 216]
+ARID1B: Communities [230, 171, 81, 84, 85, 191]
+TSC1: Communities [226, 115, 94, 219]
+SETDB1: Communities [136, 180]
+BAP1: Communities [144, 222]
+TBL1XR1: Communities [205, 206, 183, 185, 188, 190]
