@@ -1184,12 +1184,11 @@ def create_community_size_chart(communities):
         orientation='h',
         marker=dict(
             color=colors,
-            line=dict(width=0),
-            cornerradius=4
+            line=dict(width=0)
         ),
         text=sizes,
         textposition='outside',
-        textfont=dict(size=11, color='#6366f1', weight='bold'),
+        textfont=dict(size=11, color='#6366f1'),
         hovertemplate='<b>%{y}</b><br>Ukuran: %{x} protein<extra></extra>'
     ))
     
