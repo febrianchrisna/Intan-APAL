@@ -354,16 +354,8 @@ def run_apal_analysis(n_clicks, apal_threshold):
                         figure=create_community_size_chart(communities),
                         config={'displayModeBar': False}
                     )
-                ], style={'flex': '1', 'minWidth': '400px'}),
-                
-                html.Div([
-                    dcc.Graph(
-                        id='normalized-cut-dist',
-                        figure=create_normalized_cut_chart(analysis.get('normalized_node_cuts', []), len(communities)),
-                        config={'displayModeBar': False}
-                    )
-                ], style={'flex': '1', 'minWidth': '400px'})
-            ], style={'display': 'flex', 'gap': '16px', 'flexWrap': 'wrap'})
+                ], style={'width': '100%'})
+            ])
         ])
         
         # Community details table
@@ -1222,123 +1214,6 @@ def create_community_size_chart(communities):
         margin=dict(l=50, r=60, t=50, b=30),
         paper_bgcolor='rgba(0,0,0,0)',
         plot_bgcolor='rgba(0,0,0,0)',
-        hoverlabel=dict(bgcolor='white', font_size=12, font_color='black', bordercolor='#e2e8f0')
-    )
-    
-    return fig
-
-def create_normalized_cut_chart(normalized_cuts, num_communities=0):
-    """Create MODERN normalized node cut chart with Quartile-based quality zones"""
-    fig = go.Figure()
-    
-    if not normalized_cuts:
-        fig.add_annotation(
-            text="Data tidak tersedia",
-            xref="paper", yref="paper",
-            x=0.5, y=0.5, xanchor='center', yanchor='middle',
-            showarrow=False, font=dict(size=14, color='#64748b')
-        )
-        fig.update_layout(height=280, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
-        return fig
-    
-    # Calculate quartiles
-    q1 = np.percentile(normalized_cuts, 25)  # Q1: lowest 25%
-    q3 = np.percentile(normalized_cuts, 75)  # Q3: top 25% starts here
-    
-    # Create categories based on quartiles
-    # Q1 (lowest 25%) = Baik (low normalized cut = good quality)
-    # Q2-Q3 (middle 50%) = Cukup/Stabil
-    # Q4 (top 25% highest) = Kualitas Lemah
-    categories = []
-    colors_list = []
-    community_names = []
-    
-    for i, val in enumerate(normalized_cuts):
-        community_names.append(f"Komunitas {i+1}")
-        if val <= q1:
-            categories.append('Q1 - Baik (most structural)')
-            colors_list.append('#10b981')  # Green - good quality
-        elif val <= q3:
-            categories.append('Q2-Q3 - Cukup (medium)')
-            colors_list.append('#f59e0b')  # Orange - stable
-        else:
-            categories.append('Q4 - Lemah (least structural)')
-            colors_list.append('#ef4444')  # Red - weak quality
-    
-    # Count per category
-    q1_count = sum(1 for c in categories if 'Q1' in c)
-    q23_count = sum(1 for c in categories if 'Q2-Q3' in c)
-    q4_count = sum(1 for c in categories if 'Q4' in c)
-    
-    # Scatter strip plot with community names in hover
-    fig.add_trace(go.Scatter(
-        x=normalized_cuts,
-        y=[0.5 + np.random.uniform(-0.15, 0.15) for _ in normalized_cuts],
-        mode='markers',
-        marker=dict(
-            size=12,
-            color=colors_list,
-            opacity=0.7,
-            line=dict(width=1, color='white')
-        ),
-        text=community_names,
-        customdata=categories,
-        hovertemplate='<b>%{text}</b><br>Ψ = %{x:.4f}<br>Status: %{customdata}<extra></extra>'
-    ))
-    
-    # Quality zones as background shapes based on quartiles
-    min_val = min(normalized_cuts)
-    max_val = max(normalized_cuts)
-    
-    fig.add_vrect(x0=min_val - 0.02, x1=q1, fillcolor='rgba(16, 185, 129, 0.15)', line_width=0)
-    fig.add_vrect(x0=q1, x1=q3, fillcolor='rgba(245, 158, 11, 0.15)', line_width=0)
-    fig.add_vrect(x0=q3, x1=max_val + 0.02, fillcolor='rgba(239, 68, 68, 0.15)', line_width=0)
-    
-    # Add quartile boundary lines
-    fig.add_vline(x=q1, line=dict(dash="dash", color='#10b981', width=1.5))
-    fig.add_vline(x=q3, line=dict(dash="dash", color='#ef4444', width=1.5))
-    
-    # Add count annotations with quartile info
-    q1_pos = (min_val + q1) / 2 if q1 > min_val else min_val
-    q23_pos = (q1 + q3) / 2
-    q4_pos = (q3 + max_val) / 2 if max_val > q3 else max_val
-    
-    fig.add_annotation(x=q1_pos, y=0.95, yref='paper', text=f"<b>{q1_count}</b> Q1 Baik<br><i>(most structural)</i>",
-                      showarrow=False, font=dict(size=10, color='#10b981'))
-    fig.add_annotation(x=q23_pos, y=0.95, yref='paper', text=f"<b>{q23_count}</b> Q2-Q3 Cukup<br><i>(medium)</i>",
-                      showarrow=False, font=dict(size=10, color='#f59e0b'))
-    if q4_count > 0:
-        fig.add_annotation(x=q4_pos, y=0.95, yref='paper', text=f"<b>{q4_count}</b> Q4 Lemah<br><i>(least structural)</i>",
-                          showarrow=False, font=dict(size=10, color='#ef4444'))
-    
-    # Quartile value annotations at bottom
-    fig.add_annotation(x=q1, y=-0.15, yref='paper', text=f"Q1={q1:.3f}",
-                      showarrow=False, font=dict(size=9, color='#64748b'))
-    fig.add_annotation(x=q3, y=-0.15, yref='paper', text=f"Q3={q3:.3f}",
-                      showarrow=False, font=dict(size=9, color='#64748b'))
-    
-    fig.update_layout(
-        title=dict(
-            text='<b>Kualitas Komunitas (Ψ) - Kuartil</b>',
-            font=dict(size=15, color='#1e293b'),
-            x=0, xanchor='left'
-        ),
-        xaxis=dict(
-            title=None,
-            range=[min_val - 0.05, max_val + 0.05],
-            showgrid=False,
-            zeroline=False,
-            tickfont=dict(size=10, color='#94a3b8')
-        ),
-        yaxis=dict(
-            visible=False,
-            range=[0, 1]
-        ),
-        height=220,
-        margin=dict(l=10, r=30, t=70, b=50),
-        paper_bgcolor='rgba(0,0,0,0)',
-        plot_bgcolor='rgba(0,0,0,0)',
-        showlegend=False,
         hoverlabel=dict(bgcolor='white', font_size=12, font_color='black', bordercolor='#e2e8f0')
     )
     
