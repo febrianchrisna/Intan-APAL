@@ -31,7 +31,7 @@ def test_data_loading():
         print(df.head())
         
         # Cek kolom yang diperlukan
-        required_cols = ['node1', 'node2', 'combined_score']
+        required_cols = ['node1', 'node2']
         missing_cols = [col for col in required_cols if col not in df.columns]
         
         if missing_cols:
@@ -45,15 +45,13 @@ def test_data_loading():
         print(f"Number of interactions: {len(df)}")
         print(f"Unique proteins (node1): {df['node1'].nunique()}")
         print(f"Unique proteins (node2): {df['node2'].nunique()}")
-        print(f"Combined score range: {df['combined_score'].min():.3f} - {df['combined_score'].max():.3f}")
         
         # Buat graph sederhana untuk test
         G = nx.Graph()
         for _, row in df.iterrows():
-            if row['combined_score'] >= 0.7:  # threshold test
-                G.add_edge(row['node1'], row['node2'], weight=row['combined_score'])
+            G.add_edge(row['node1'], row['node2'])
         
-        print(f"\nTest Graph (threshold=0.7):")
+        print(f"\nTest Graph:")
         print(f"Nodes: {G.number_of_nodes()}")
         print(f"Edges: {G.number_of_edges()}")
         

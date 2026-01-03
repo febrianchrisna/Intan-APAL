@@ -42,7 +42,7 @@ app.layout = html.Div([
         html.Div([
             html.Div([
                 html.Label("Upload File Interaksi Protein:", style={'fontWeight': 'bold'}),
-                html.P("Kolom yang diperlukan: node1, node2, combined_score", style={'fontSize': '12px', 'color': '#7f8c8d', 'margin': '5px 0'}),
+                html.P("Kolom yang diperlukan: node1, node2", style={'fontSize': '12px', 'color': '#7f8c8d', 'margin': '5px 0'}),
                 dcc.Upload(
                     id='upload-data',
                     children=html.Div([
@@ -189,18 +189,15 @@ def load_data(upload_contents, upload_filename):
         df.columns = df.columns.str.replace('#', '', regex=False)
         
         # Check required columns
-        required_cols = ['node1', 'node2', 'combined_score']
+        required_cols = ['node1', 'node2']
         if not all(col in df.columns for col in required_cols):
             return f"❌ Kolom yang diperlukan tidak ditemukan: {required_cols}", "", {}, {}
         
-        # Create graph - NO NORMALIZATION since data is already in correct format
+        # Create graph - unweighted for normalized node cut calculations
         G = nx.Graph()
-        # NOTE: combined_score disimpan di graph untuk referensi, tapi TIDAK 
-        # digunakan dalam perhitungan normalized node cut (menggunakan unweighted)
         for _, row in df.iterrows():
-            node1, node2, weight = row['node1'], row['node2'], row['combined_score']
-            # Combined score stored for reference but NOT used in normalized cut calculations
-            G.add_edge(node1, node2, weight=weight, combined_score=weight)
+            node1, node2 = row['node1'], row['node2']
+            G.add_edge(node1, node2)
         
         status_msg = f"✅ File berhasil diupload: {upload_filename}"
         
@@ -331,12 +328,6 @@ def run_apal_analysis(n_clicks, apal_threshold):
                     "Total Komunitas", 
                     f"{overlapping_communities} overlap · {non_overlapping_communities} non-overlap",
                     '#6366f1', '#6366f1'
-                ),
-                metric_card(
-                    f"{analysis.get('avg_normalized_node_cut', 0):.4f}",
-                    "Normalized Node Cut (Ψ)",
-                    "Semakin rendah = semakin baik",
-                    '#06b6d4', '#06b6d4'
                 ),
                 metric_card(
                     len(overlapping_nodes),
@@ -1041,7 +1032,7 @@ def export_communities_csv(n_clicks, store_data):
             'Algoritma': 'APAL - Adjacency Propagation Algorithm',
             'Metode_Evaluasi': 'Normalized Node Cut UNWEIGHTED (Havemann et al. 2012)',
             'Sumber_Data': 'File yang diunggah pengguna',
-            'Penggunaan_Bobot': 'combined_score TIDAK digunakan dalam perhitungan normalized cut'
+            'Penggunaan_Bobot': 'Unweighted graph (tidak menggunakan bobot)'
         }
         
         # Create final export with metadata emphasizing UNWEIGHTED normalized node cut
@@ -1143,8 +1134,6 @@ def create_community_details_table(communities, detector, overlapping_nodes, thr
     
     return html.Div([
         html.H4("Detail Komunitas", style={'color': '#2c3e50', 'marginBottom': '20px'}),
-        html.P(f"Rata-rata Normalized Node Cut: {alt_metrics['avg_normalized_node_cut']:.4f} (semakin rendah semakin baik)", 
-               style={'fontWeight': 'bold', 'marginBottom': '15px'}),
         table
     ])
 

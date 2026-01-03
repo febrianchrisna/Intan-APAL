@@ -752,8 +752,7 @@ class APALCommunityDetector:
         for _, row in df.iterrows():
             node1 = row['node1']
             node2 = row['node2']
-            weight = row['combined_score']
-            self.graph.add_edge(node1, node2, weight=weight, combined_score=weight)
+            self.graph.add_edge(node1, node2)
         
         print(f"Graph created with {self.graph.number_of_nodes()} nodes and {self.graph.number_of_edges()} edges")
         return self.graph
