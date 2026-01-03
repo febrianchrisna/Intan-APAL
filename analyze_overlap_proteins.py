@@ -90,7 +90,7 @@ def analyze_overlap_proteins(G, communities, top_n=20):
         lambda x: biological_functions.get(x, 'Unknown - requires manual annotation')
     )
     
-    # Identifikasi komunitas untuk setiap protein
+    #Identifikasi komunitas untuk setiap protein
     protein_communities = {}
     for protein in df_overlap['Protein']:
         comms = [i+1 for i, c in enumerate(communities) if protein in c]
