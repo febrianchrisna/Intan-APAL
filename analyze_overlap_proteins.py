@@ -40,18 +40,6 @@ def analyze_overlap_proteins(G, communities, top_n=20):
     # Create DataFrame
     df_overlap = pd.DataFrame(top_overlap, columns=['Protein', 'Num_Communities'])
     
-    # Tambahkan degree (jumlah koneksi)
-    df_overlap['Degree'] = df_overlap['Protein'].apply(lambda x: G.degree(x))
-    
-    # Tambahkan betweenness centrality (pentingnya protein dalam network)
-    print("\n⏳ Menghitung betweenness centrality...")
-    betweenness = nx.betweenness_centrality(G)
-    df_overlap['Betweenness'] = df_overlap['Protein'].apply(lambda x: round(betweenness.get(x, 0), 6))
-    
-    # Tambahkan clustering coefficient
-    clustering = nx.clustering(G)
-    df_overlap['Clustering'] = df_overlap['Protein'].apply(lambda x: round(clustering.get(x, 0), 4))
-    
     # Database fungsi biologis untuk protein kanker payudara yang umum
     biological_functions = {
         # Key signaling & tumor suppressors
@@ -149,7 +137,7 @@ def analyze_overlap_proteins(G, communities, top_n=20):
     return df_overlap
 
 def visualize_overlap_proteins(df_overlap, output_dir='d:\\7. Intan\\Intan APAL'):
-    fig, axes = plt.subplots(2, 2, figsize=(16, 12))
+    fig, axes = plt.subplots(1, 2, figsize=(14, 6))
     fig.suptitle('Top Overlap Proteins Analysis', 
                  fontsize=16, fontweight='bold')
     
@@ -157,88 +145,62 @@ def visualize_overlap_proteins(df_overlap, output_dir='d:\\7. Intan\\Intan APAL'
     df_top5 = df_overlap.head(5)
     
     # 1. Number of Communities (horizontal bar)
-    ax = axes[0, 0]
+    ax = axes[0]
     colors = plt.cm.viridis(np.linspace(0, 1, len(df_top5)))
     bars = ax.barh(range(len(df_top5)), df_top5['Num_Communities'], color=colors, edgecolor='black')
     ax.set_yticks(range(len(df_top5)))
-    ax.set_yticklabels(df_top5['Protein'], fontsize=10, fontweight='bold')
-    ax.set_xlabel('Number of Communities', fontweight='bold', fontsize=11)
-    ax.set_title('Top 5 Overlap Proteins by Community Count', fontweight='bold', fontsize=12)
+    ax.set_yticklabels(df_top5['Protein'], fontsize=12, fontweight='bold')
+    ax.set_xlabel('Number of Communities', fontweight='bold', fontsize=12)
+    ax.set_title('Top 5 Overlap Proteins by Community Count', fontweight='bold', fontsize=13)
     ax.grid(alpha=0.3, axis='x')
     ax.invert_yaxis()
     
     # Add value labels
     for i, (protein, count) in enumerate(zip(df_top5['Protein'], df_top5['Num_Communities'])):
-        ax.text(count + 0.1, i, str(count), va='center', fontweight='bold', fontsize=9)
+        ax.text(count + 0.1, i, str(count), va='center', fontweight='bold', fontsize=10)
     
-    # 2. Degree vs Number of Communities (scatter)
-    ax = axes[0, 1]
-    scatter = ax.scatter(df_top5['Degree'], df_top5['Num_Communities'], 
-                        s=200, c=df_top5['Betweenness'], cmap='coolwarm', 
-                        edgecolors='black', linewidths=1.5, alpha=0.8)
-    
-    # Add protein labels
-    for i, row in df_top5.iterrows():
-        ax.annotate(row['Protein'], (row['Degree'], row['Num_Communities']), 
-                   fontsize=8, fontweight='bold', ha='center', va='bottom')
-    
-    ax.set_xlabel('Degree (Number of Connections)', fontweight='bold', fontsize=11)
-    ax.set_ylabel('Number of Communities', fontweight='bold', fontsize=11)
-    ax.set_title('Overlap Proteins: Degree vs Community Membership', fontweight='bold', fontsize=12)
-    ax.grid(alpha=0.3)
-    
-    # Add colorbar for betweenness
-    cbar = plt.colorbar(scatter, ax=ax)
-    cbar.set_label('Betweenness Centrality', fontweight='bold', fontsize=9)
-    
-    # 3. Betweenness Centrality (horizontal bar)
-    ax = axes[1, 0]
-    df_sorted_bc = df_top5.sort_values('Betweenness', ascending=True)
-    colors_bc = plt.cm.plasma(np.linspace(0, 1, len(df_sorted_bc)))
-    ax.barh(range(len(df_sorted_bc)), df_sorted_bc['Betweenness'], 
-            color=colors_bc, edgecolor='black')
-    ax.set_yticks(range(len(df_sorted_bc)))
-    ax.set_yticklabels(df_sorted_bc['Protein'], fontsize=10, fontweight='bold')
-    ax.set_xlabel('Betweenness Centrality', fontweight='bold', fontsize=11)
-    ax.set_title('Network Centrality of Overlap Proteins', fontweight='bold', fontsize=12)
-    ax.grid(alpha=0.3, axis='x')
-    
-    # 4. Summary metrics table
-    ax = axes[1, 1]
+    # 2. Summary table with biological function
+    ax = axes[1]
     ax.axis('off')
     
     # Create table data
     table_data = []
     for i, row in df_top5.iterrows():
+        # Truncate biological function if too long
+        bio_func = row['Biological_Function']
+        if len(bio_func) > 50:
+            bio_func = bio_func[:47] + '...'
         table_data.append([
             row['Protein'],
             row['Num_Communities'],
-            row['Degree'],
-            f"{row['Betweenness']:.4f}"
+            bio_func
         ])
     
     table = ax.table(cellText=table_data,
-                    colLabels=['Protein', 'Communities', 'Degree', 'Betweenness'],
-                    cellLoc='center',
+                    colLabels=['Protein', 'Communities', 'Fungsi Biologis'],
+                    cellLoc='left',
                     loc='center',
                     bbox=[0, 0, 1, 1])
     
     table.auto_set_font_size(False)
     table.set_fontsize(9)
-    table.scale(1, 2)
+    table.scale(1, 2.5)
     
     # Style header
-    for i in range(4):
+    for i in range(3):
         table[(0, i)].set_facecolor('#3498db')
         table[(0, i)].set_text_props(weight='bold', color='white')
     
     # Alternate row colors
     for i in range(1, len(table_data) + 1):
-        for j in range(4):
+        for j in range(3):
             if i % 2 == 0:
                 table[(i, j)].set_facecolor('#f0f0f0')
     
-    ax.set_title('Top 5 Overlap Proteins Summary', fontweight='bold', fontsize=12, pad=20)
+    # Set column widths
+    table.auto_set_column_width([0, 1, 2])
+    
+    ax.set_title('Top 5 Overlap Proteins Summary', fontweight='bold', fontsize=13, pad=20)
     
     plt.tight_layout()
     
@@ -345,8 +307,8 @@ def main():
     print("=" * 80)
     
     # Simplified table for markdown
-    df_markdown = df_overlap[['Protein', 'Num_Communities', 'Degree', 'Betweenness', 'Biological_Function']].copy()
-    df_markdown.columns = ['Protein', 'Communities', 'Degree', 'Betweenness', 'Fungsi Biologis']
+    df_markdown = df_overlap[['Protein', 'Num_Communities', 'Biological_Function']].copy()
+    df_markdown.columns = ['Protein', 'Communities', 'Fungsi Biologis']
     print("\n```markdown")
     print(df_markdown.head(10).to_markdown(index=False))
     print("```")
