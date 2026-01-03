@@ -103,7 +103,7 @@ def analyze_overlap_proteins(G, communities, top_n=20):
     return df_overlap
 
 def visualize_overlap_proteins(df_overlap, output_dir='d:\\7. Intan\\Intan APAL'):
-    fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+    fig, axes = plt.subplots(1, 2, figsize=(20, 8))
     fig.suptitle('Top Overlap Proteins Analysis', 
                  fontsize=16, fontweight='bold')
     
@@ -125,21 +125,17 @@ def visualize_overlap_proteins(df_overlap, output_dir='d:\\7. Intan\\Intan APAL'
     for i, (protein, count) in enumerate(zip(df_top5['Protein'], df_top5['Num_Communities'])):
         ax.text(count + 0.1, i, str(count), va='center', fontweight='bold', fontsize=10)
     
-    # 2. Summary table with biological function
+    # 2. Summary table with biological function (FULL TEXT)
     ax = axes[1]
     ax.axis('off')
     
-    # Create table data
+    # Create table data - tampilkan fungsi biologis lengkap
     table_data = []
     for i, row in df_top5.iterrows():
-        # Truncate biological function if too long
-        bio_func = row['Biological_Function']
-        if len(bio_func) > 50:
-            bio_func = bio_func[:47] + '...'
         table_data.append([
             row['Protein'],
             row['Num_Communities'],
-            bio_func
+            row['Biological_Function']  # Tampilkan lengkap tanpa truncate
         ])
     
     table = ax.table(cellText=table_data,
@@ -149,22 +145,26 @@ def visualize_overlap_proteins(df_overlap, output_dir='d:\\7. Intan\\Intan APAL'
                     bbox=[0, 0, 1, 1])
     
     table.auto_set_font_size(False)
-    table.set_fontsize(9)
-    table.scale(1, 2.5)
+    table.set_fontsize(7)
     
-    # Style header
-    for i in range(3):
-        table[(0, i)].set_facecolor('#3498db')
-        table[(0, i)].set_text_props(weight='bold', color='white')
+    # Set column widths manually - protein sempit, communities sempit, fungsi biologis lebar
+    for i in range(len(table_data) + 1):
+        table[(i, 0)].set_width(0.12)  # Protein column - sempit
+        table[(i, 1)].set_width(0.08)  # Communities column - sangat sempit
+        table[(i, 2)].set_width(0.80)  # Fungsi Biologis - sisanya
     
-    # Alternate row colors
-    for i in range(1, len(table_data) + 1):
+    # Style cells
+    for i in range(len(table_data) + 1):
         for j in range(3):
-            if i % 2 == 0:
-                table[(i, j)].set_facecolor('#f0f0f0')
-    
-    # Set column widths
-    table.auto_set_column_width([0, 1, 2])
+            cell = table[(i, j)]
+            if i == 0:  # Header
+                cell.set_facecolor('#3498db')
+                cell.set_text_props(weight='bold', color='white', ha='left')
+            else:  # Data rows
+                if i % 2 == 0:
+                    cell.set_facecolor('#f0f0f0')
+                cell.set_text_props(ha='left', va='top', wrap=True)
+                cell.set_height(0.15)  # Row height lebih besar
     
     ax.set_title('Top 5 Overlap Proteins Summary', fontweight='bold', fontsize=13, pad=20)
     
