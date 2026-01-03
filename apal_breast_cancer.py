@@ -1,18 +1,3 @@
-#!/usr/bin/env python3
-"""
-DETEKSI KOMUNITAS OVERLAP MENGGUNAKAN ADJACENCY PROPAGATION ALGORITHM 
-PADA PROTEIN KANKER PAYUDARA
-
-Implementation of Adjacency Propagation Algorithm (APAL) for overlapping 
-community detection in breast cancer protein interaction networks.
-
-Based on the paper:
-"APAL: Adjacency Propagation Algorithm for overlapping community detection in biological networks"
-by Osman Doluca and Kaya Oğuz (2021)
-
-Core algorithm corrected based on proper Evaluate function implementation.
-"""
-
 import pandas as pd
 import numpy as np
 import networkx as nx
@@ -25,18 +10,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 class APALDetector:
-    """
-    Adjacency Propagation Algorithm for overlapping community detection
-    Implementasi BENAR dengan Evaluate function yang diperbaiki
-    """
-    
     def __init__(self, graph):
-        """
-        Initialize APAL detector
-        
-        Args:
-            graph: NetworkX graph object
-        """
         if not isinstance(graph, nx.Graph):
             raise TypeError("graph must be a networkx.Graph")
         
@@ -53,21 +27,9 @@ class APALDetector:
         self.execution_timeline = []  # List of (node_index, cumulative_time, communities_count)
     
     def get_neighbors(self, node) -> Set:
-        """Get neighbors of a node as a set (N(v) in the paper)"""
         return set(self.graph.neighbors(node))
     
     def intraconnectivity(self, community: Iterable) -> float:
-        """
-        Calculate intraconnectivity according to Equation (2) from the paper:
-        α = k / [n(n-1)]
-        where k is sum of internal degrees, n is community size
-        
-        Args:
-            community: Set or iterable of nodes in the community
-            
-        Returns:
-            float: Intraconnectivity value α
-        """
         community = set(community)
         n = len(community)
         if n <= 1:
@@ -86,10 +48,6 @@ class APALDetector:
     
     @staticmethod
     def jaccard_index(set1: Iterable, set2: Iterable) -> float:
-        """
-        Calculate Jaccard index: |A ∩ B| / |A ∪ B|
-        Used in the Evaluate function (line 26 in Algorithm 1)
-        """
         A, B = set(set1), set(set2)
         union = A | B
         if not union:
@@ -97,24 +55,6 @@ class APALDetector:
         return len(A & B) / len(union)
     
     def evaluate_community(self, C: List[Set], Cc: Set, t: float) -> List[Set]:
-        """
-        Evaluate function - IMPLEMENTASI BENAR sesuai Algorithm 1 (lines 22-40)
-        
-        Logika:
-        1. Jika Cc ⊆ Cn (subset): kandidat tidak menambah info → return C as-is
-        2. Jika Cn ⊆ Cc (superset): Cn lama akan digantikan → jangan masukkan Cn
-        3. Overlap kuat: cari Cn dengan Jaccard terbesar Jc>t dan α(Cn∪Cc)≥t → merge
-        4. Setelah loop: jika ada merge, hapus Cn terpilih, set Cc=Cm
-        5. Return C ∪ {Cc}
-        
-        Args:
-            C (list): Current list of communities  
-            Cc (set): Candidate community
-            t (float): Threshold parameter
-            
-        Returns:
-            list: Updated community list
-        """
         Jm = 0.0  # Maximum Jaccard index found
         Cm: Set = set()  # Best merge candidate
         best_Cn: Set = set()  # Komunitas yang akan di-merge
@@ -160,16 +100,6 @@ class APALDetector:
         return C_updated
     
     def apal_algorithm(self, t=0.35):
-        """
-        Main APAL Algorithm - IMPLEMENTASI BENAR sesuai Algorithm 1
-        Dengan tracking waktu eksekusi kumulatif
-        
-        Args:
-            t (float): Threshold parameter for intraconnectivity
-            
-        Returns:
-            list: List of detected communities
-        """
         print(f"🚀 Running APAL algorithm with threshold t={t}")
         
         if not (0.0 <= t <= 1.0):
@@ -260,21 +190,10 @@ class APALDetector:
         return self.communities
     
     def get_execution_timeline(self):
-        """
-        Mendapatkan timeline waktu eksekusi kumulatif
-        
-        Returns:
-            list: List of dictionaries dengan data timeline
-        """
         return self.execution_timeline
     
     @staticmethod
     def _deduplicate(C: List[Set]) -> List[Set]:
-        """
-        Pembersihan duplikasi komunitas:
-        - Hilangkan duplikat identik
-        - Hilangkan komunitas yang merupakan subset dari komunitas lain
-        """
         # 1. Buang duplikat identik
         unique = []
         seen = set()
@@ -313,25 +232,6 @@ class APALDetector:
                 self.node_to_communities[node].add(i)
 
     def normalized_node_cut(self, community: Iterable) -> float:
-        """
-        Calculate Normalized Node Cut (Ψ) for UNWEIGHTED overlapping communities 
-        following Havemann, Gläser, Heinz, and Struck (2012).
-        
-        Formula: Ψ(C) = (1 / k_in(C)) * Σ_{i ∈ C} [ (k_in_i(C) * k_out_i(C)) / k_i ]
-        
-        Where (for UNWEIGHTED graphs):
-        - k_in_i(C) = NUMBER of edges from node i to other members of C (internal degree)
-        - k_out_i(C) = NUMBER of edges from node i to non-members (external degree)
-        - k_i = k_in_i(C) + k_out_i(C) (total degree of node i)
-        - k_in(C) = Σ_{i ∈ C} k_in_i(C) (total internal degree of community)
-        
-        Args:
-            community: Set or iterable of nodes in the community
-            
-        Returns:
-            float: Normalized Node Cut value Ψ(C), lower values indicate better 
-                   community separation (range: 0 to 1, where 0 is perfect separation)
-        """
         community = set(community)
         if len(community) <= 1:
             return 1.0  # Komunitas trivial dianggap bocor
@@ -356,10 +256,6 @@ class APALDetector:
         return boundary_conductance_sum / kin_total
 
     def calculate_alternative_metrics(self, communities):
-        """
-        Calculate quality metrics with Normalized Node Cut as primary quality indicator.
-        Uses UNWEIGHTED implementation for all calculations.
-        """
         metrics = {}
         
         # 1. Normalized Node Cut (Havemann et al. 2012) - PRIMARY METRIC (UNWEIGHTED)
@@ -566,7 +462,7 @@ class APALDetector:
                                  node_shape='*',
                                  edgecolors='darkred',
                                  linewidths=2,
-                                 label='Overlapping (Hub Proteins)')
+                                 label='Overlapping Proteins')
         
         # Draw labels
         labels = {}
@@ -718,7 +614,7 @@ class APALDetector:
             axes[1, 2].set_yticks(range(len(nodes)))
             axes[1, 2].set_yticklabels(nodes, fontsize=8)
             axes[1, 2].set_xlabel('Number of Communities')
-            axes[1, 2].set_title('Top 10 Hub Proteins')
+            axes[1, 2].set_title('Top 10 Overlap Proteins')
             axes[1, 2].grid(alpha=0.3, axis='x')
         
         plt.tight_layout()
@@ -816,12 +712,6 @@ class APALCommunityDetector:
         return analysis
     
     def _calculate_coverage(self):
-        """
-        Calculate coverage of the community structure
-        
-        Returns:
-            float: Coverage value
-        """
         covered_nodes = set()
         for community in self.communities:
             covered_nodes.update(community)
@@ -829,13 +719,6 @@ class APALCommunityDetector:
         return len(covered_nodes) / len(self.graph.nodes()) if len(self.graph.nodes()) > 0 else 0.0
     
     def visualize_communities(self, max_communities=10, figsize=(15, 10)):
-        """
-        Visualize the detected communities
-        
-        Args:
-            max_communities (int): Maximum number of communities to visualize
-            figsize (tuple): Figure size
-        """
         if not self.communities:
             print("No communities detected. Run APAL algorithm first.")
             return
@@ -970,11 +853,11 @@ class APALCommunityDetector:
                                      edgecolors='black',
                                      linewidths=1.5)
             
-            # Draw overlapping nodes (hub proteins) with different color
+            # Draw overlapping nodes with different color
             if overlap_nodes:
                 nx.draw_networkx_nodes(subgraph, pos,
                                      nodelist=overlap_nodes,
-                                     node_color='#ff7f0e',  # Orange color for hubs
+                                     node_color='#ff7f0e',  # Orange color for overlap
                                      node_size=400,
                                      alpha=0.9,
                                      edgecolors='darkred',
@@ -996,7 +879,7 @@ class APALCommunityDetector:
             title = f'Struktur Komunitas (Modularity: {modularity:.4f}, Jumlah Komunitas: {len(self.communities)})\n'
             title += f'Community {community_id}: {len(community)} proteins'
             if overlap_nodes:
-                title += f' ({len(overlap_nodes)} hub proteins)'
+                title += f' ({len(overlap_nodes)} overlap proteins)'
             
             plt.title(title, fontsize=14, fontweight='bold', pad=20)
             plt.axis('off')
@@ -1008,7 +891,7 @@ class APALCommunityDetector:
             ]
             if overlap_nodes:
                 legend_elements.append(
-                    Patch(facecolor='#ff7f0e', edgecolor='darkred', label='Hub Protein (Multi-community)')
+                    Patch(facecolor='#ff7f0e', edgecolor='darkred', label='Overlap Protein (Multi-community)')
                 )
             plt.legend(handles=legend_elements, loc='upper right', fontsize=10)
             
@@ -1131,7 +1014,7 @@ def main():
         print(f"  • Komunitas terdeteksi: {final_analysis['num_communities']}")
         print(f"  • Normalized Node Cut (Ψ): {final_analysis['avg_normalized_node_cut']:.4f}")
         print(f"  • Coverage: {final_analysis['coverage']:.4f}")
-        print(f"  • Protein hub: {final_analysis['num_overlapping_nodes']}")
+        print(f"  • Overlap protein: {final_analysis['num_overlapping_nodes']}")
         
         detector.graph = graph
         detector.communities = best_communities

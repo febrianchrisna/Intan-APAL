@@ -590,7 +590,6 @@ def create_community_visualization_section(communities):
     prevent_initial_call=True
 )
 def update_community_visualization(community_idx):
-    """Create detailed visualization for selected community or all communities"""
     global current_results, G, detector
     
     if current_results is None or community_idx is None:

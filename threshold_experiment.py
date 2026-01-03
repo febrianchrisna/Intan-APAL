@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-EKSPERIMEN THRESHOLD APAL
-Testing berbagai nilai threshold untuk justifikasi pemilihan threshold optimal
-"""
-
 import pandas as pd
 import numpy as np
 import networkx as nx
@@ -13,7 +7,6 @@ from apal_breast_cancer import APALDetector
 import time
 
 def load_graph(filepath):
-    """Load graph dari file TSV"""
     print(f"📁 Loading data dari: {filepath}")
     
     df = pd.read_csv(filepath, sep='\t')
@@ -27,16 +20,6 @@ def load_graph(filepath):
     return G
 
 def run_threshold_experiment(G, thresholds):
-    """
-    Jalankan eksperimen dengan berbagai threshold values
-    
-    Args:
-        G: NetworkX graph
-        thresholds: List of threshold values to test
-        
-    Returns:
-        DataFrame dengan hasil eksperimen
-    """
     print("=" * 80)
     print("EKSPERIMEN THRESHOLD APAL")
     print("=" * 80)
@@ -101,8 +84,6 @@ def run_threshold_experiment(G, thresholds):
     return pd.DataFrame(results)
 
 def visualize_threshold_comparison(df_results, output_dir='d:\\7. Intan\\Intan APAL'):
-    """Buat visualisasi perbandingan threshold"""
-    
     fig, axes = plt.subplots(2, 3, figsize=(18, 10))
     fig.suptitle('Threshold Experiment Results - APAL Algorithm', 
                  fontsize=16, fontweight='bold', y=0.995)
@@ -193,7 +174,6 @@ def visualize_threshold_comparison(df_results, output_dir='d:\\7. Intan\\Intan A
     plt.show()
 
 def print_recommendation(df_results):
-    """Print rekomendasi threshold berdasarkan hasil eksperimen"""
     print("\n" + "=" * 80)
     print("REKOMENDASI THRESHOLD")
     print("=" * 80)
@@ -234,8 +214,6 @@ def print_recommendation(df_results):
             print(f"    t={row['Threshold']:.1f}: Ψ={row['Avg_Psi']:.4f}, Communities={row['Communities']}, Coverage={row['Coverage']:.4f}")
 
 def main():
-    """Main experiment function"""
-    
     # Configuration
     DATA_FILE = "d:\\7. Intan\\Intan APAL\\string_interactions.tsv"  # Gunakan file yang lebih kecil untuk testing cepat
     THRESHOLDS = [0.1, 0.2, 0.3, 0.4, 0.5]
