@@ -264,10 +264,7 @@ class APALDetector:
             psi = self.normalized_node_cut(community)
             normalized_node_cuts.append(psi)
         
-        return {
-            'avg_normalized_node_cut': np.mean(normalized_node_cuts) if normalized_node_cuts else 0.0,
-            'normalized_node_cuts': normalized_node_cuts
-        }
+        return normalized_node_cuts
     
     def analyze_communities(self):
         """
@@ -277,7 +274,7 @@ class APALDetector:
             return {}
         
         # Calculate normalized node cuts (primary quality metric)
-        ncut_metrics = self.calculate_normalized_node_cuts(self.communities)
+        normalized_node_cuts = self.calculate_normalized_node_cuts(self.communities)
         
         # Find overlapping nodes
         overlapping_nodes = defaultdict(list)
@@ -288,25 +285,12 @@ class APALDetector:
         overlapping_nodes = {node: comms for node, comms in overlapping_nodes.items() 
                            if len(comms) > 1}
         
-        # Calculate intraconnectivity for each community
-        intraconn_values = []
-        for community in self.communities:
-            intraconn = self.intraconnectivity(community)
-            intraconn_values.append(intraconn)
-        
-        avg_intraconnectivity = np.mean(intraconn_values) if intraconn_values else 0
-        
         # Community sizes
         community_sizes = [len(c) for c in self.communities]
         
         analysis_results = {
             # PRIMARY METRICS
-            'avg_normalized_node_cut': ncut_metrics['avg_normalized_node_cut'],
-            'normalized_node_cuts': ncut_metrics['normalized_node_cuts'],
-            
-            # INTRACONNECTIVITY METRICS
-            'avg_intraconnectivity': avg_intraconnectivity,
-            'intraconnectivity_values': intraconn_values,
+            'normalized_node_cuts': normalized_node_cuts,
             
             # OVERLAP METRICS
             'overlapping_nodes': overlapping_nodes,
@@ -321,26 +305,6 @@ class APALDetector:
         }
         
         return analysis_results
-    
-    def get_community_stats(self):
-        """Get detailed community statistics using normalized node cut as primary metric"""
-        stats = []
-        for i, community in enumerate(self.communities):
-            community_list = list(community)
-            intraconn = self.intraconnectivity(community)
-            # Use normalized node cut as primary metric (UNWEIGHTED)
-            normalized_cut = self.normalized_node_cut(community)
-            
-            stats.append({
-                'community_id': i,
-                'size': len(community),
-                'normalized_node_cut': normalized_cut,  # PRIMARY
-                'intraconnectivity': intraconn,  # SECONDARY
-                'nodes': sorted(community_list),
-                'meets_conductance_threshold': normalized_cut <= 0.3,  # Lower is better
-                'meets_intraconnectivity_threshold': intraconn >= 0.35  # Original threshold check
-            })
-        return stats
 
     def visualize_overlapping_communities(self, max_communities=10, figsize=(20, 12)):
         """Visualize overlapping communities with enhanced color coding"""

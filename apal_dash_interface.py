@@ -1025,7 +1025,6 @@ def export_communities_csv(n_clicks, store_data):
             'Komunitas_Overlap': sum(1 for row in export_data if row['Tipe'] == 'Overlap'),
             'APAL_Threshold': threshold,
             'Metrik_Utama': 'Normalized_Node_Cut_Havemann_et_al_2012_UNWEIGHTED',
-            'Avg_Normalized_Node_Cut': round(analysis.get('avg_normalized_node_cut', 0), 6),
             'Node_Jaringan': len(detector.graph.nodes()),
             'Edge_Jaringan': len(detector.graph.edges()),
             'Algoritma': 'APAL - Adjacency Propagation Algorithm',
@@ -1077,7 +1076,7 @@ def create_community_details_table(communities, detector, overlapping_nodes, thr
         return html.Div("Tidak ditemukan komunitas.", style={'textAlign': 'center', 'color': '#7f8c8d'})
     
     # Calculate normalized node cuts (primary quality metric)
-    ncut_metrics = detector.calculate_normalized_node_cuts(communities)
+    normalized_node_cuts = detector.calculate_normalized_node_cuts(communities)
     
     # Prepare data for table
     table_data = []
