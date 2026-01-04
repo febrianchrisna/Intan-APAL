@@ -579,7 +579,7 @@ class APALCommunityDetector:
     def load_data(self, filepath):
         """Load protein interaction data from TSV file"""
         print("Loading protein interaction data...")
-        
+    
         df = pd.read_csv(filepath, sep='\t')
         df.columns = df.columns.str.replace('#', '', regex=False)
         
