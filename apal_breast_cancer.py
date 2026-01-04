@@ -255,88 +255,29 @@ class APALDetector:
         
         return boundary_conductance_sum / kin_total
 
-    def calculate_alternative_metrics(self, communities):
-        metrics = {}
-        
-        # 1. Normalized Node Cut (Havemann et al. 2012) - PRIMARY METRIC (UNWEIGHTED)
+    def calculate_normalized_node_cuts(self, communities):
+        """Calculate normalized node cuts for all communities (primary quality metric)"""
         normalized_node_cuts = []
         for community in communities:
             if len(community) <= 1:
                 continue
-            
-            psi = self.normalized_node_cut(community)  # UNWEIGHTED
+            psi = self.normalized_node_cut(community)
             normalized_node_cuts.append(psi)
         
-        metrics['avg_normalized_node_cut'] = np.mean(normalized_node_cuts) if normalized_node_cuts else 0.0
-        metrics['normalized_node_cuts'] = normalized_node_cuts
-        
-        # 2. Overlapping Quality
-        overlapping_quality = 0
-        total_overlaps = 0
-        
-        node_memberships = defaultdict(list)
-        for i, community in enumerate(communities):
-            for node in community:
-                node_memberships[node].append(i)
-        
-        for node, memberships in node_memberships.items():
-            if len(memberships) > 1:
-                total_overlaps += 1
-                node_neighbors = set(self.graph.neighbors(node))
-                
-                community_neighbors = defaultdict(int)
-                for neighbor in node_neighbors:
-                    for membership in memberships:
-                        if neighbor in communities[membership]:
-                            community_neighbors[membership] += 1
-                
-                if len(community_neighbors) > 1:
-                    overlapping_quality += 1
-        
-        metrics['overlap_quality'] = overlapping_quality / total_overlaps if total_overlaps > 0 else 0
-        
-        # 3. Coverage
-        all_nodes_in_communities = set()
-        for community in communities:
-            all_nodes_in_communities.update(community)
-        
-        coverage = len(all_nodes_in_communities) / len(self.graph.nodes())
-        metrics['coverage'] = coverage
-        
-        # 4. Biological Significance Score (based on size and conductance)
-        bio_scores = []
-        for i, community in enumerate(communities):
-            size = len(community)
-            # Use normalized node cut (lower is better, so invert for scoring)
-            if i < len(normalized_node_cuts):
-                conductance_score = max(0, 1 - normalized_node_cuts[i])  # Invert: lower cut = higher score
-            else:
-                conductance_score = 0
-            
-            # Size score (optimal range 3-50 proteins per complex)
-            if 3 <= size <= 50:
-                size_score = 1.0
-            elif size < 3:
-                size_score = size / 3.0
-            else:
-                size_score = max(0.1, 50.0 / size)
-            
-            bio_score = (size_score + conductance_score) / 2
-            bio_scores.append(bio_score)
-        
-        metrics['avg_biological_score'] = np.mean(bio_scores) if bio_scores else 0
-        
-        return metrics
+        return {
+            'avg_normalized_node_cut': np.mean(normalized_node_cuts) if normalized_node_cuts else 0.0,
+            'normalized_node_cuts': normalized_node_cuts
+        }
     
     def analyze_communities(self):
         """
-        Comprehensive analysis using Normalized Node Cut as the primary quality metric.
+        Analyze communities using metrics displayed in dashboard.
         """
         if not hasattr(self, 'communities') or not self.communities:
             return {}
         
-        # Calculate metrics with normalized node cut as primary
-        alt_metrics = self.calculate_alternative_metrics(self.communities)
+        # Calculate normalized node cuts (primary quality metric)
+        ncut_metrics = self.calculate_normalized_node_cuts(self.communities)
         
         # Find overlapping nodes
         overlapping_nodes = defaultdict(list)
@@ -347,7 +288,7 @@ class APALDetector:
         overlapping_nodes = {node: comms for node, comms in overlapping_nodes.items() 
                            if len(comms) > 1}
         
-        # Calculate intraconnectivity for each community (kept for compatibility)
+        # Calculate intraconnectivity for each community
         intraconn_values = []
         for community in self.communities:
             intraconn = self.intraconnectivity(community)
@@ -359,22 +300,21 @@ class APALDetector:
         community_sizes = [len(c) for c in self.communities]
         
         analysis_results = {
-            # PRIMARY METRICS (Normalized Node Cut - Havemann et al. 2012)
-            'avg_normalized_node_cut': alt_metrics['avg_normalized_node_cut'],
-            'normalized_node_cuts': alt_metrics['normalized_node_cuts'],
+            # PRIMARY METRICS
+            'avg_normalized_node_cut': ncut_metrics['avg_normalized_node_cut'],
+            'normalized_node_cuts': ncut_metrics['normalized_node_cuts'],
             
-            # SECONDARY METRICS
-            'overlap_quality': alt_metrics['overlap_quality'],
-            'avg_biological_score': alt_metrics['avg_biological_score'],
-            
-            # BASIC STATS  
+            # INTRACONNECTIVITY METRICS
             'avg_intraconnectivity': avg_intraconnectivity,
             'intraconnectivity_values': intraconn_values,
+            
+            # OVERLAP METRICS
             'overlapping_nodes': overlapping_nodes,
-            'coverage': alt_metrics['coverage'],
+            'num_overlapping_nodes': len(overlapping_nodes),
+            
+            # BASIC STATS
             'community_sizes': community_sizes,
             'num_communities': len(self.communities),
-            'num_overlapping_nodes': len(overlapping_nodes),
             'total_nodes': len(self.graph.nodes()),
             'total_edges': len(self.graph.edges()),
             'avg_community_size': np.mean(community_sizes) if community_sizes else 0
@@ -698,8 +638,7 @@ class APALCommunityDetector:
         analysis = {
             'num_communities': len(self.communities),
             'community_sizes': [len(c) for c in self.communities],
-            'overlapping_nodes': self.get_overlapping_nodes(),
-            'coverage': self._calculate_coverage()
+            'overlapping_nodes': self.get_overlapping_nodes()
         }
         
         print("=== COMMUNITY ANALYSIS ===")
@@ -707,16 +646,8 @@ class APALCommunityDetector:
         print(f"Community sizes: {analysis['community_sizes']}")
         print(f"Average community size: {np.mean(analysis['community_sizes']):.2f}")
         print(f"Number of overlapping nodes: {len(analysis['overlapping_nodes'])}")
-        print(f"Coverage: {analysis['coverage']:.4f}")
         
         return analysis
-    
-    def _calculate_coverage(self):
-        covered_nodes = set()
-        for community in self.communities:
-            covered_nodes.update(community)
-        
-        return len(covered_nodes) / len(self.graph.nodes()) if len(self.graph.nodes()) > 0 else 0.0
     
     def visualize_communities(self, max_communities=10, figsize=(15, 10)):
         if not self.communities:
@@ -969,66 +900,3 @@ class APALCommunityDetector:
         plt.close()
         
         print(f"    ✓ Summary visualization saved: 00_ALL_COMMUNITIES_SUMMARY.png")
-
-def main():
-    """Main function to run the APAL community detection"""
-    print("=== DETEKSI KOMUNITAS OVERLAP MENGGUNAKAN APAL ===")
-    print("=== IMPLEMENTASI BENAR dengan Evaluate Function yang Diperbaiki ===\n")
-    
-    data_file = "d:\\Intan APAL\\string_interactions.tsv"
-    try:
-        detector = APALCommunityDetector(threshold=0.7)
-        graph = detector.load_data(data_file)
-        
-        print(f"✅ Grafik berhasil dimuat dengan {graph.number_of_nodes()} node dan {graph.number_of_edges()} edge")
-        
-        apal = APALDetector(graph)
-        
-        thresholds = [0.1, 0.2, 0.3, 0.4, 0.5]
-        
-        best_communities = []
-        best_threshold = 0.3
-        best_score = float('inf')
-        
-        print("Menguji threshold yang berbeda...")
-        for t in thresholds:
-            print(f"\n--- Threshold APAL: {t} ---")
-            communities = apal.apal_algorithm(t=t)
-            analysis = apal.analyze_communities()
-            
-            print(f"Komunitas ditemukan: {analysis['num_communities']}")
-            print(f"Normalized Node Cut (Ψ): {analysis['avg_normalized_node_cut']:.4f}")
-            
-            if analysis.get('avg_normalized_node_cut', float('inf')) < best_score:
-                best_score = analysis['avg_normalized_node_cut']
-                best_threshold = t
-                best_communities = communities.copy()
-        
-        print(f"\n=== HASIL TERBAIK (Threshold APAL: {best_threshold}) ===")
-        
-        apal.communities = best_communities
-        apal._update_node_to_communities()
-        final_analysis = apal.analyze_communities()
-        
-        print(f"\n=== HASIL ===")
-        print(f"  • Komunitas terdeteksi: {final_analysis['num_communities']}")
-        print(f"  • Normalized Node Cut (Ψ): {final_analysis['avg_normalized_node_cut']:.4f}")
-        print(f"  • Coverage: {final_analysis['coverage']:.4f}")
-        print(f"  • Overlap protein: {final_analysis['num_overlapping_nodes']}")
-        
-        detector.graph = graph
-        detector.communities = best_communities
-        detector._update_node_to_communities()
-        detector.save_results('hasil_apal_corrected.txt')
-        
-        print(f"\n✅ Algoritma APAL dengan Evaluate function yang benar telah dijalankan!")
-        
-    except FileNotFoundError:
-        print(f"Error: File tidak ditemukan: {data_file}")
-    except Exception as e:
-        print(f"Error: {str(e)}")
-        import traceback
-        traceback.print_exc()
-
-if __name__ == "__main__":
-    main()

@@ -1076,8 +1076,8 @@ def create_community_details_table(communities, detector, overlapping_nodes, thr
     if not communities:
         return html.Div("Tidak ditemukan komunitas.", style={'textAlign': 'center', 'color': '#7f8c8d'})
     
-    # Calculate metrics with normalized node cut as primary (UNWEIGHTED)
-    alt_metrics = detector.calculate_alternative_metrics(communities)
+    # Calculate normalized node cuts (primary quality metric)
+    ncut_metrics = detector.calculate_normalized_node_cuts(communities)
     
     # Prepare data for table
     table_data = []
